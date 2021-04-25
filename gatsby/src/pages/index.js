@@ -1,9 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaReact, FaNodeJs, FaPhp, FaPython } from 'react-icons/fa';
+import {
+  FaReact,
+  FaNodeJs,
+  FaPhp,
+  FaPython,
+  FaInstagram,
+  FaGithub,
+  FaLinkedinIn,
+} from 'react-icons/fa';
 import { RiGatsbyLine } from 'react-icons/ri';
 import { BsPhone } from 'react-icons/bs';
 import { SiCplusplus } from 'react-icons/si';
+import { Link } from 'gatsby';
 import SEO from '../components/SEO';
 import nextIcon from '../assets/images/next.svg';
 import nestIcon from '../assets/images/nest.svg';
@@ -28,15 +37,13 @@ const Container = styled.div`
   }
 `;
 
-const LeftSide = styled.div`
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: var(--green);
-`;
-
 const RightSide = styled.div`
   margin-left: 6rem;
+   .fi {
+    display: inline-block;
+    padding: 0.6rem;
+    transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
+  }
   h1 {
     font-size: 5rem;
     font-weight: 400;
@@ -116,7 +123,38 @@ const ServicesGrid = styled.div`
     width: 20rem;
   }
 `;
-
+const LeftSideDiv = styled.div`
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--green);
+`;
+const LeftSide = styled.div`
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    list-style: none;
+    margin-top: 10rem;
+    font-size: 4rem;
+    padding: 4rem 2rem;
+    border-right: 3px solid var(--darkGrey);
+    li {
+      margin-bottom: 4rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: var(--grey);
+      transition: 0.3s;
+      &:hover {
+        color: var(--green);
+      }
+    }
+  }
+`;
 export default function FirstPage() {
   return (
     <Container>
@@ -135,7 +173,9 @@ export default function FirstPage() {
           field. In my free time I code on youtubelive or do some coding
           courses. My hobby is football and tenis.
         </p>
-        <h3>## my services</h3>
+        <h3>
+          <span className="mark fi">## my services</span>
+        </h3>
         <ServicesGrid>
           <ul>
             <li>### development</li>
@@ -225,7 +265,7 @@ export default function FirstPage() {
                   <SiCplusplus />
                 </span>
                 <span className="text">
-                  <span className="mark sec">C++</span>
+                  <span className="mark thi">C++</span>
                   Very often used in college, object, data structures
                 </span>
               </li>
@@ -233,7 +273,26 @@ export default function FirstPage() {
           </div>
         </ServicesGrid>
       </RightSide>
-      <LeftSide />
+      <LeftSide>
+        <LeftSideDiv />
+        <ul>
+          <li>
+            <Link to="https://www.instagram.com">
+              <FaGithub />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://www.instagram.com">
+              <FaLinkedinIn />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://www.instagram.com">
+              <FaInstagram />
+            </Link>
+          </li>
+        </ul>
+      </LeftSide>
     </Container>
   );
 }

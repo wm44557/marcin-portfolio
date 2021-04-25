@@ -9,7 +9,7 @@ const ContentStyles = styled.div`
   padding: 2rem;
 `;
 const SiteBorderStyles = styled.div`
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 5rem auto 4rem auto;
   margin-top: clamp(2rem, 10vw, 5rem);
   background-color: rgba(20, 19, 19, 0.75);
