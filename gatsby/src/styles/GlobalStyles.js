@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--green) var(--white);
+    scrollbar-color: var(--green) var(--black);
   }
   body::-webkit-scrollbar-track {
     background: var(--white);

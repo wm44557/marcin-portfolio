@@ -65,7 +65,7 @@ const NavStyles = styled.nav`
   p {
     display: none;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 850px) {
     margin-left: 0;
     margin-top: 1rem;
     border-right: 1px solid var(--darkGrey);

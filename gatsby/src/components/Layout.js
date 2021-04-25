@@ -10,8 +10,8 @@ const ContentStyles = styled.div`
 `;
 const SiteBorderStyles = styled.div`
   max-width: 1200px;
-  margin: 12rem auto 4rem auto;
-  margin-top: clamp(2rem, 10vw, 12rem);
+  margin: 5rem auto 4rem auto;
+  margin-top: clamp(2rem, 10vw, 5rem);
   background-color: rgba(20, 19, 19, 0.75);
   padding: 5px;
   padding: clamp(5px, 1vw, 25px);
@@ -22,7 +22,7 @@ const SiteBorderStyles = styled.div`
   grid-template-columns: auto 1fr;
   @media (max-width: 1100px) {
     margin-left: 1.5rem;
-    margin-right: 1.5em;
+    margin-right: 1.5rem;
   }
 `;
 export default function Layout({ children }) {
