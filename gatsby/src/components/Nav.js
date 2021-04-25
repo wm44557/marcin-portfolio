@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { BiBookOpen, BiEnvelope } from 'react-icons/bi';
+import { IoPersonOutline } from 'react-icons/io5';
+import { BsCollection } from 'react-icons/bs';
+import { FaRegEnvelopeOpen } from 'react-icons/fa';
 
 const NavStyles = styled.nav`
   margin: 4rem;
   margin-left: 0;
-  border-right: 2px solid var(--darkGrey);
-  padding: 2rem;
+  border-right: 3px solid var(--darkGrey);
+  padding: 3rem;
   padding-left: 0;
   ul {
     margin: 0;
@@ -17,7 +21,7 @@ const NavStyles = styled.nav`
   li {
     --translateX: 5px;
     transform: translateX(var(--translateX));
-    margin-bottom: 4rem;
+    margin-bottom: 4em;
     &:hover {
       --translateX: 15px;
     }
@@ -26,13 +30,13 @@ const NavStyles = styled.nav`
     }
     transition: 0.3s;
   }
-  span {
+  .hasz {
     display: none;
   }
   .active {
     color: var(--grey);
 
-    span {
+    .hasz {
       display: inline-block;
       margin-right: 5px;
     }
@@ -50,6 +54,13 @@ const NavStyles = styled.nav`
       font-size: 2rem;
     }
   }
+  .icon {
+    float: right;
+    display: inline-block;
+    font-size: 4rem;
+    margin-left: 2rem;
+    transform: translateY(-15%);
+  }
 `;
 
 export default function Nav() {
@@ -58,22 +69,38 @@ export default function Nav() {
       <ul>
         <li>
           <Link to="/" activeClassName="active">
-            <span># </span>about me
+            <span className="hasz"># </span>
+            <span>about me</span>
+            <div className="icon">
+              <IoPersonOutline />
+            </div>
           </Link>
         </li>
         <li>
           <Link to="/resume" activeClassName="active">
-            <span># </span>resume
+            <span className="hasz"># </span>
+            <span>resume</span>
+            <div className="icon">
+              <BiBookOpen />
+            </div>
           </Link>
         </li>
         <li>
           <Link to="/projects" activeClassName="active">
-            <span># </span>projects
+            <span className="hasz"># </span>
+            <span>projects</span>
+            <div className="icon">
+              <BsCollection />
+            </div>
           </Link>
         </li>
         <li>
           <Link to="/contact" activeClassName="active">
-            <span># </span>contact
+            <span className="hasz"># </span>
+            <span>contact</span>
+            <div className="icon">
+              <FaRegEnvelopeOpen />
+            </div>
           </Link>
         </li>
       </ul>
