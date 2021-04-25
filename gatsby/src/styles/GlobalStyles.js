@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
   :root {
     --green: #126060;
     --black: #141313;
@@ -9,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #CBCBCB;
     --darkGrey:#464646;
-    font-family: 'Open Sans', sans-serif;
     
   }
   html {

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { BiBookOpen, BiEnvelope } from 'react-icons/bi';
+import { BiBookOpen } from 'react-icons/bi';
 import { IoPersonOutline } from 'react-icons/io5';
-import { BsCollection, BsBook } from 'react-icons/bs';
+import { BsCollection } from 'react-icons/bs';
 import { FaRegEnvelopeOpen } from 'react-icons/fa';
 
 const NavStyles = styled.nav`
@@ -30,9 +30,6 @@ const NavStyles = styled.nav`
       padding-bottom: clamp(10rem, 20vw, 30rem);
     }
     transition: 0.3s;
-    @media (max-width: 600px) {
-      padding-bottom: 2rem;
-    }
   }
   .hasz {
     display: none;
@@ -92,7 +89,7 @@ const NavStyles = styled.nav`
       margin-top: 0;
     }
     li {
-      --translateX: 0px;
+      padding-bottom: 2rem;
     }
   }
 `;

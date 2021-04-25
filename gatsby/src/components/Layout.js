@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 import Nav from './Nav';
+import Typography from '../styles/Typography';
 
 const ContentStyles = styled.div`
-  background: white;
+  background: red;
   padding: 2rem;
 `;
 const SiteBorderStyles = styled.div`
@@ -27,6 +28,7 @@ const SiteBorderStyles = styled.div`
 export default function Layout({ children }) {
   return (
     <>
+      <Typography />
       <GlobalStyles />
       <SiteBorderStyles>
         <Nav />
