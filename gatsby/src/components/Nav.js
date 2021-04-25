@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { BiBookOpen, BiEnvelope } from 'react-icons/bi';
 import { IoPersonOutline } from 'react-icons/io5';
-import { BsCollection } from 'react-icons/bs';
+import { BsCollection, BsBook } from 'react-icons/bs';
 import { FaRegEnvelopeOpen } from 'react-icons/fa';
 
 const NavStyles = styled.nav`
   margin: 4rem;
-  margin-left: 0;
+  margin-left: 1rem;
   border-right: 3px solid var(--darkGrey);
   padding: 3rem;
   padding-left: 0;
@@ -19,6 +19,7 @@ const NavStyles = styled.nav`
     list-style: none;
   }
   li {
+    clear: both;
     --translateX: 5px;
     transform: translateX(var(--translateX));
     margin-bottom: 4em;
@@ -26,16 +27,19 @@ const NavStyles = styled.nav`
       --translateX: 15px;
     }
     &:last-child {
-      padding-bottom: clamp(10rem, 25vw, 30rem);
+      padding-bottom: clamp(10rem, 20vw, 30rem);
     }
     transition: 0.3s;
+    @media (max-width: 600px) {
+      padding-bottom: 2rem;
+    }
   }
   .hasz {
     display: none;
   }
   .active {
     color: var(--grey);
-
+    transform: scale(1.1);
     .hasz {
       display: inline-block;
       margin-right: 5px;
@@ -61,6 +65,36 @@ const NavStyles = styled.nav`
     margin-left: 2rem;
     transform: translateY(-15%);
   }
+  p {
+    display: none;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0;
+    margin-top: 1rem;
+    border-right: 1px solid var(--darkGrey);
+    span {
+      display: none;
+    }
+    .active {
+      .hasz {
+        display: none;
+      }
+    }
+    .icon {
+      display: block;
+      font-size: 3rem;
+      text-align: center;
+    }
+    p {
+      display: block;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 0;
+    }
+    li {
+      --translateX: 0px;
+    }
+  }
 `;
 
 export default function Nav() {
@@ -73,6 +107,7 @@ export default function Nav() {
             <span>about me</span>
             <div className="icon">
               <IoPersonOutline />
+              <p>me</p>
             </div>
           </Link>
         </li>
@@ -82,6 +117,7 @@ export default function Nav() {
             <span>resume</span>
             <div className="icon">
               <BiBookOpen />
+              <p>cv</p>
             </div>
           </Link>
         </li>
@@ -91,15 +127,17 @@ export default function Nav() {
             <span>projects</span>
             <div className="icon">
               <BsCollection />
+              <p>prj</p>
             </div>
           </Link>
         </li>
         <li>
           <Link to="/contact" activeClassName="active">
             <span className="hasz"># </span>
-            <span>contact</span>
+            <span className="text">contact</span>
             <div className="icon">
               <FaRegEnvelopeOpen />
+              <p>ct</p>
             </div>
           </Link>
         </li>
