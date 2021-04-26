@@ -112,12 +112,13 @@ const ServicesGrid = styled.div`
       padding: 0.6rem;
       justify-content: center;
     }
-    border-bottom: 1px solid var(--grey);
-    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--darkGrey);
+    padding-bottom: 2rem;
   }
   .text {
     font-size: 1.7rem;
     font-weight: 300;
+    width: 100%;
   }
   .icon {
     display: flex;

@@ -34,6 +34,10 @@ const Typography = createGlobalStyle`
     margin-right: 1rem;
     margin-bottom: 4px;
     font-weight: 400;
+    &.pri {
+      transform: rotate(3deg);
+      background-color: var(--primary);
+    }
     &.sec {
       transform: rotate(-3deg);
       background-color: #0c6c83;

@@ -22,14 +22,33 @@ const NavStyles = styled.nav`
     clear: both;
     --translateX: 5px;
     transform: translateX(var(--translateX));
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     &:hover {
       --translateX: 15px;
     }
     &:last-child {
       padding-bottom: clamp(10rem, 20vw, 30rem);
     }
+    &:hover {
+      & .mark {
+        background-color: var(--black);
+      }
+    }
     transition: 0.3s;
+    .mark {
+      &.pri {
+        transform: rotate(1deg);
+      }
+      &.sec {
+        transform: rotate(-1deg);
+      }
+      &.ter {
+        transform: rotate(1deg);
+      }
+      &.qua {
+        transform: rotate(-1deg);
+      }
+    }
   }
   .hasz {
     display: none;
@@ -43,7 +62,8 @@ const NavStyles = styled.nav`
     }
   }
   a {
-    color: var(--darkGrey);
+    color: var(--grey);
+    padding: 1.2rem 2rem;
     font-size: 2.5rem;
     text-decoration: none;
     display: block;
@@ -99,7 +119,7 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li>
-          <Link to="/" activeClassName="active">
+          <Link to="/" activeClassName="active" className="link mark pri">
             <span className="hasz"># </span>
             <span>about me</span>
             <div className="icon">
@@ -109,7 +129,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/resume" activeClassName="active">
+          <Link to="/resume" activeClassName="active" className="link mark sec">
             <span className="hasz"># </span>
             <span>resume</span>
             <div className="icon">
@@ -119,7 +139,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/projects" activeClassName="active">
+          <Link
+            to="/projects"
+            activeClassName="active"
+            className="link mark ter"
+          >
             <span className="hasz"># </span>
             <span>projects</span>
             <div className="icon">
@@ -129,7 +153,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/contact" activeClassName="active">
+          <Link
+            to="/contact"
+            activeClassName="active"
+            className="link mark qua"
+          >
             <span className="hasz"># </span>
             <span className="text">contact</span>
             <div className="icon">
