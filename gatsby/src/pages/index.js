@@ -13,16 +13,35 @@ import { RiGatsbyLine } from 'react-icons/ri';
 import { BsPhone } from 'react-icons/bs';
 import { SiCplusplus } from 'react-icons/si';
 import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import Image from 'gatsby-image';
 import SEO from '../components/SEO';
 import { NextLogo, NestLogo } from '../assets/images/icons';
 
+const ImageWrapper = styled(Image)`
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--grey);
+  transform: translate(-15px, -5px);
+`;
+const LeftSideDiv = styled.div`
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--green);
+`;
 const Container = styled.div`
   display: grid;
   margin: 3rem;
   margin-top: 7rem;
   grid-template-columns: 1fr auto;
   position: relative;
+
   .borderleft {
     border-left: 3px solid var(--darkGrey);
     position: absolute;
@@ -82,8 +101,20 @@ const RightSide = styled.div`
 `;
 const ServicesGrid = styled.div`
   display: grid;
-  grid-template-columns: auto 1fr;
-
+  grid-template-columns: 1fr;
+  .flexNav {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    margin-top: 0;
+    li {
+      padding: 0.6rem;
+      justify-content: center;
+    }
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 1rem;
+  }
   .text {
     font-size: 1.7rem;
     font-weight: 300;
@@ -178,12 +209,7 @@ const ServicesGrid = styled.div`
     }
   }
 `;
-const LeftSideDiv = styled.div`
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: var(--green);
-`;
+
 const LeftSide = styled.div`
   margin-left: 5rem;
   display: flex;
@@ -191,7 +217,9 @@ const LeftSide = styled.div`
   align-items: center;
   ul {
     list-style: none;
-    margin-top: 10rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
     font-size: 4rem;
     padding: 4rem 2rem;
     border-right: 3px solid var(--darkGrey);
@@ -210,7 +238,8 @@ const LeftSide = styled.div`
     }
   }
 `;
-export default function FirstPage() {
+export default function FirstPage({ data }) {
+  console.log(data);
   return (
     <Container>
       <SEO title="About me" />
@@ -232,10 +261,10 @@ export default function FirstPage() {
           <span className="mark fi">## my services</span>
         </h3>
         <ServicesGrid>
-          <ul>
-            <li>### development</li>
-            <li className="nav">### database</li>
-            <li className="nav">### tools</li>
+          <ul className="flexNav">
+            <li className="mark qua">### development</li>
+            <li className="mark qui">### database</li>
+            <li className="mark ter">### tools</li>
           </ul>
           <div>
             <ul>
@@ -331,8 +360,10 @@ export default function FirstPage() {
         </ServicesGrid>
       </RightSide>
       <LeftSide>
-        <LeftSideDiv />
-        <ul>
+        <LeftSideDiv>
+          <ImageWrapper fluid={data.file.childImageSharp.fluid} />
+        </LeftSideDiv>
+        <ul className="nav">
           <li>
             <Link to="https://www.instagram.com">
               <FaGithub />
@@ -353,3 +384,14 @@ export default function FirstPage() {
     </Container>
   );
 }
+export const query = graphql`
+  {
+    file(name: { eq: "ja9" }) {
+      childImageSharp {
+        fluid(maxWidth: 200, maxHeight: 200, quality: 98) {
+          src
+        }
+      }
+    }
+  }
+`;
