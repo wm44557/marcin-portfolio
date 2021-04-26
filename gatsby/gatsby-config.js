@@ -14,6 +14,13 @@ export default {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
       // this is the name of the plugin you are adding
       resolve: 'gatsby-source-sanity',
       options: {

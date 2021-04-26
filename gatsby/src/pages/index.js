@@ -12,10 +12,10 @@ import {
 import { RiGatsbyLine } from 'react-icons/ri';
 import { BsPhone } from 'react-icons/bs';
 import { SiCplusplus } from 'react-icons/si';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import SEO from '../components/SEO';
-import nextIcon from '../assets/images/next.svg';
-import nestIcon from '../assets/images/nest.svg';
+import { NextLogo, NestLogo } from '../assets/images/icons';
 
 const Container = styled.div`
   display: grid;
@@ -84,23 +84,6 @@ const ServicesGrid = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
 
-  .mark {
-    display: inline-block;
-    transform: rotate(3deg);
-    font-size: 2rem;
-    margin-right: 1rem;
-    margin-bottom: 4px;
-    font-weight: 400;
-  }
-  .sec {
-    transform: rotate(-3deg);
-  }
-  .thi {
-    transform: rotate(3deg);
-  }
-  .for {
-    transform: rotate(-4deg);
-  }
   .text {
     font-size: 1.7rem;
     font-weight: 300;
@@ -116,11 +99,83 @@ const ServicesGrid = styled.div`
     color: var(--grey);
     flex-direction: row;
     margin-top: 3rem;
-  }
-  img {
-    color: white;
-    font-size: 2rem;
-    width: 20rem;
+    cursor: default;
+
+    &:hover {
+      & .text {
+        background-color: var(--primary);
+      }
+      & .icon {
+        color: var(--primary);
+      }
+      & .mark {
+        background-color: var(--black);
+        margin: 1rem;
+      }
+
+      &.sec {
+        & .text {
+          background-color: var(--secondary);
+        }
+        & .icon {
+          color: var(--secondary);
+        }
+        & .mark {
+          background-color: var(--black);
+          margin: 1rem;
+        }
+      }
+      &.ter {
+        .terLogo {
+          fill: var(--tertiary);
+        }
+        & .text {
+          background-color: var(--tertiary);
+        }
+
+        & .mark {
+          background-color: var(--black);
+          margin: 1rem;
+        }
+      }
+      &.qua {
+        & .text {
+          background-color: var(--quaternary);
+        }
+        & .icon {
+          color: var(--quaternary);
+        }
+        & .mark {
+          background-color: var(--black);
+          margin: 1rem;
+        }
+      }
+      &.qui {
+        & .text {
+          background-color: var(--quinary);
+        }
+        & .icon {
+          color: var(--quinary);
+        }
+        & .mark {
+          background-color: var(--black);
+          margin: 1rem;
+        }
+      }
+      &.sen {
+        .senLogo {
+          fill: var(--senary);
+        }
+        & .text {
+          background-color: var(--senary);
+        }
+
+        & .mark {
+          background-color: var(--black);
+          margin: 1rem;
+        }
+      }
+    }
   }
 `;
 const LeftSideDiv = styled.div`
@@ -194,69 +249,71 @@ export default function FirstPage() {
                   TS/ES6
                 </span>
               </li>
-              <li>
-                <span className="icon">
+              <li className="sec">
+                <span className="icon sec">
                   <RiGatsbyLine />
                 </span>
-                <span className="text">
-                  <span className="mark sec">Gatsby</span>+ SanityIO (headless
-                  cms), fetching data from api, creating graphiql nodes, SEO,
-                  writing hooks
+                <span className="sec text">
+                  <span className="mark sec">Gatsby</span>
+                  <span>
+                    + SanityIO (headless cms), fetching data from api, creating
+                    graphiql nodes, SEO, writing hooks
+                  </span>
                 </span>
               </li>
-              <li>
-                <span className="icon">
-                  <img src={nextIcon} alt="" />
+              <li className="ter">
+                <span className="icon ter">
+                  <NextLogo width="60px" height="60px" className="terLogo" />
                 </span>
                 <span className="text">
-                  <span className="mark thi">NextJs</span>+ KeystoneJS (Node
+                  <span className="mark ter">NextJs</span>+ KeystoneJS (Node
                   graphql server & TS & mongodb), Apollo Client mutations,
                   fetching caching, loading
                 </span>
               </li>
-              <li>
-                <span className="icon">
+              <li className="qua">
+                <span className="icon qua">
                   <FaNodeJs />
                 </span>
                 <span className="text">
-                  <span className="mark for">NodeJs</span>+ express, ajax, rest
+                  <span className="mark qua">NodeJs</span>+ express, ajax, rest
                   api, authentication, schemas, email, mvc, middleware + mongodb
                 </span>
               </li>
-              <li>
-                <span className="icon">
+              <li className="qui">
+                <span className="icon qui">
                   <FaPhp />
                 </span>
                 <span className="text">
-                  <span className="mark thi">PHP</span> MVC, Routing, +
+                  <span className="mark qui">PHP</span> MVC, Routing, +
                   composer, guzzle
                 </span>
               </li>
-              <li>
-                <span className="icon">
-                  <img src={nestIcon} alt="" />
+              <li className="sen">
+                <span className="icon sen">
+                  <NestLogo width="60px" height="60px" className="senLogo" />
                 </span>
                 <span className="text">
-                  <span className="mark thi">NestJs</span>(NodeJS framework) in
+                  <span className="mark sen">NestJs</span>(NodeJS framework) in
                   learning.. + MySQL & MariaDB or mongoose + TS,CRON auth,
                   validation, emails
                 </span>
               </li>
-              <li>
-                <span className="icon">
+              <li className="qui">
+                <span className="icon qui">
                   <FaPython />
                 </span>
                 <span className="text">
-                  <span className="mark sec">Python</span> Pandas, numpy,
+                  <span className="mark qui">Python</span> Pandas, numpy,
                   matplotlib, scikit-learn
                 </span>
               </li>
-              <li>
-                <span className="icon">
+              <li className="qua">
+                <span className="icon qua">
                   <BsPhone />
                 </span>
-                <span className="text">
-                  <span className="mark for">React Native</span>
+                <span className="text ">
+                  <span className="mark qua">React Native</span>
                   Simple apps, not complicated
                 </span>
               </li>
@@ -265,7 +322,7 @@ export default function FirstPage() {
                   <SiCplusplus />
                 </span>
                 <span className="text">
-                  <span className="mark thi">C++</span>
+                  <span className="mark">C++</span>
                   Very often used in college, object, data structures
                 </span>
               </li>

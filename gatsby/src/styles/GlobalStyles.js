@@ -2,6 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
+    --primary:#126060;
+    --secondary:#0c6c83;
+    --tertiary:#4075a0;
+    --quaternary:#7979af;
+    --quinary:#af7aad;
+    --senary:#d87f9b;
+    
     --green: #126060;
     --black: #141313;
     --yellow: #ffc600;

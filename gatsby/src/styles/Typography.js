@@ -28,7 +28,34 @@ const Typography = createGlobalStyle`
     margin: 0;
     display: inline;
     line-height: 1;
+    display: inline-block;
+    transform: rotate(3deg);
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 4px;
+    font-weight: 400;
+    &.sec {
+      transform: rotate(-3deg);
+      background-color: #0c6c83;
+    }
+    &.ter {
+      transform: rotate(3deg);
+      background-color: var(--tertiary);
+    }
+    &.qua {
+      transform: rotate(-4deg);
+      background-color: var(--quaternary);
+    }
+    &.qui {
+      transform: rotate(3deg);
+      background-color: var(--quinary);
+    }
+    &.sen {
+      transform: rotate(3deg);
+      background-color: var(--senary);
+    }
   }
+  
 
   .center {
     text-align: center;
