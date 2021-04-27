@@ -12,15 +12,23 @@ const Typography = createGlobalStyle`
   p, li {
     letter-spacing: 0.5px;
   }
+  ul{
+     list-style: none;
+
+  }
   h1,h2,h3,h4,h5,h6 {
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
   }
   a {
-    color: var(--green);
+    color: var(--darkGrey);
     text-decoration-color: var(--grey);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;
+    &:hover {
+      color: var(--green);
+    }
+
   }
   mark, .mark {
     background: var(--green);
