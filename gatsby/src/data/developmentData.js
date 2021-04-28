@@ -12,7 +12,8 @@ export const data = {
     mark: 'React',
     description:
       ' (styled components, redux,mobx, axios, unit tests, GraphQl) + TS/ES6',
-    li: 'pri',
+    li: 'primary',
+    color: 'primary',
   },
   gatsby: {
     type: 'react-icons',
@@ -20,7 +21,7 @@ export const data = {
     mark: 'Gatsby',
     description:
       'SanityIO (headless cms), fetching data from api, creating graphiql nodes, SEO, writing hooks',
-    color: 'sec',
+    color: 'secondary',
   },
   next: {
     type: 'svg',
@@ -28,7 +29,7 @@ export const data = {
     mark: 'NextJS',
     description:
       '+ KeystoneJS (Node graphql server & TS & mongodb), Apollo Client mutations, fetching caching, loading',
-    color: 'ter',
+    color: 'tertiary',
   },
   node: {
     type: 'react-icons',
@@ -36,14 +37,14 @@ export const data = {
     mark: 'NodeJs',
     description:
       ' + express, ajax, rest api, authentication, schemas, email, mvc, middleware + mongodb',
-    color: 'qua',
+    color: 'quaternary',
   },
   php: {
     type: 'react-icons',
     icon: FaPhp,
     mark: 'PHP',
     description: 'MVC, Routing, + composer, guzzle',
-    color: 'qui',
+    color: 'quinary',
   },
   nest: {
     type: 'svg',
@@ -51,27 +52,27 @@ export const data = {
     mark: 'PHP',
     description:
       '(NodeJS framework) in learning.. + MySQL & MariaDB or mongoose + TS,CRON auth, validation, mails',
-    color: 'sen',
+    color: 'senary',
   },
   python: {
     type: 'react-icons',
     icon: FaPython,
     mark: 'Python',
     description: 'Pandas, numpy, matplotlib, scikit-learne',
-    color: 'qui',
+    color: 'quinary',
   },
   reactNative: {
     type: 'react-icons',
     icon: BsPhone,
     mark: 'React Native',
     description: ' Simple apps, not complicated',
-    color: 'qua',
+    color: 'quaternary',
   },
   cpp: {
     type: 'react-icons',
     icon: SiCplusplus,
     mark: 'C++',
     description: ' Very often used in college, object, data structures',
-    color: 'pri',
+    color: 'primary',
   },
 };

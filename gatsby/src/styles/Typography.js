@@ -9,6 +9,9 @@ const Typography = createGlobalStyle`
     font-family: OpenSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--grey);
   }
+  p{
+  font-weight: 300;
+  }
   p, li {
     letter-spacing: 0.5px;
   }
@@ -42,27 +45,27 @@ const Typography = createGlobalStyle`
     margin-right: 1rem;
     margin-bottom: 4px;
     font-weight: 400;
-    &.pri {
+    &.primary {
       transform: rotate(3deg);
       background-color: var(--primary);
     }
-    &.sec {
+    &.secondary {
       transform: rotate(-3deg);
       background-color: #0c6c83;
     }
-    &.ter {
+    &.tertiary {
       transform: rotate(3deg);
       background-color: var(--tertiary);
     }
-    &.qua {
+    &.quaternary {
       transform: rotate(-4deg);
       background-color: var(--quaternary);
     }
-    &.qui {
+    &.quinary {
       transform: rotate(3deg);
       background-color: var(--quinary);
     }
-    &.sen {
+    &.senary {
       transform: rotate(3deg);
       background-color: var(--senary);
     }

@@ -21,6 +21,21 @@ export const Container = styled.div`
   }
 `;
 
+export const RightWrapper = styled.div`
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Circle = styled.div`
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--green);
+`;
+
 export const ImageWrapper = styled(Image)`
   position: absolute !important;
   top: 0;
@@ -32,15 +47,8 @@ export const ImageWrapper = styled(Image)`
   border: 3px solid var(--grey);
   transform: translate(-15px, -5px);
 `;
-export const LeftSideDiv = styled.div`
-  position: relative;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: var(--green);
-`;
 
-export const RightSide = styled.div`
+export const LeftWrapper = styled.div`
   margin-left: 6rem;
   .fi {
     display: inline-block;
@@ -49,7 +57,6 @@ export const RightSide = styled.div`
   }
 
   h1 {
-    font-weight: 400;
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -64,7 +71,6 @@ export const RightSide = styled.div`
   }
   p {
     margin-top: 2rem;
-    font-weight: 300;
   }
   h3 {
     margin-top: 3rem;
@@ -80,10 +86,9 @@ export const RightSide = styled.div`
   }
 `;
 
-export const ServicesGrid = styled.div`
+export const ServicesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-
   .text {
     font-size: 1.7rem;
     font-weight: 300;
@@ -96,104 +101,27 @@ export const ServicesGrid = styled.div`
     margin-right: 1.5rem;
     align-items: center;
   }
-  li {
+`;
+export const StyledListItem = styled.li`
     display: flex;
     color: var(--grey);
     flex-direction: row;
     margin-top: 3rem;
     cursor: default;
-
     &:hover {
       .svg {
-        fill: var(--primary);
+        fill: var(--${(props) => props.color});
       }
       & .text {
-        background-color: var(--primary);
+        background-color: var(--${(props) => props.color});
         padding-bottom: 1rem;
       }
       & .icon {
-        color: var(--primary);
+        color:  var(--${(props) => props.color})
       }
       & .mark {
         background-color: var(--black);
         margin: 1rem;
-      }
-
-      &.sec {
-        .svg {
-          fill: var(--secondary);
-        }
-        & .text {
-          background-color: var(--secondary);
-        }
-        & .icon {
-          color: var(--secondary);
-        }
-        & .mark {
-          background-color: var(--black);
-          margin: 1rem;
-        }
-      }
-      &.ter {
-        .svg {
-          fill: var(--tertiary);
-        }
-        & .text {
-          background-color: var(--tertiary);
-        }
-        & .icon {
-          background-color: var(--tertiary);
-        }
-
-        & .mark {
-          background-color: var(--black);
-          margin: 1rem;
-        }
-      }
-      &.qua {
-        .svg {
-          fill: var(--quaternary);
-        }
-        & .text {
-          background-color: var(--quaternary);
-        }
-        & .icon {
-          color: var(--quaternary);
-        }
-        & .mark {
-          background-color: var(--black);
-          margin: 1rem;
-        }
-      }
-      &.qui {
-        .svg {
-          fill: var(--quinary);
-        }
-        & .text {
-          background-color: var(--quinary);
-        }
-        & .icon {
-          color: var(--quinary);
-        }
-        & .mark {
-          background-color: var(--black);
-          margin: 1rem;
-        }
-      }
-      &.sen {
-        .svg {
-          fill: var(--senary);
-        }
-        & .text {
-          background-color: var(--senary);
-        }
-        & .icon {
-          color: var(--senary);
-        }
-        & .mark {
-          background-color: var(--black);
-          margin: 1rem;
-        }
       }
     }
   }
@@ -202,7 +130,6 @@ export const SubNav = styled.ul`
   display: flex;
   justify-content: space-around;
   overflow: hidden;
-  margin-top: 0;
   li {
     padding: 0.6rem;
     transition: 0.3s;
@@ -225,11 +152,4 @@ export const SubNav = styled.ul`
       }
     }
   }
-`;
-
-export const LeftSide = styled.div`
-  margin-left: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;

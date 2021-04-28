@@ -3,10 +3,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import SEO from '../components/SEO';
 import {
   Container,
-  RightSide,
-  LeftSide,
+  LeftWrapper,
+  RightWrapper,
   ImageWrapper,
-  LeftSideDiv,
+  Circle,
 } from '../styles/AboutStyles';
 import { dataText } from '../data/meDataEn';
 import Services from '../components/Services';
@@ -26,9 +26,9 @@ export default function FirstPage() {
   `);
   return (
     <Container>
-      <SEO title="About me" />
+      <SEO title="About me - My Services" />
       <div className="borderleft" />
-      <RightSide>
+      <LeftWrapper>
         <h1> {dataText.name}</h1>
         <h2>
           {dataText.old} <span> / </span>
@@ -40,13 +40,13 @@ export default function FirstPage() {
           <span className="mark fi">## {dataText.sub}</span>
         </h3>
         <Services />
-      </RightSide>
-      <LeftSide>
-        <LeftSideDiv>
+      </LeftWrapper>
+      <RightWrapper>
+        <Circle>
           <ImageWrapper fluid={data.childImageSharp.fluid} />
-        </LeftSideDiv>
+        </Circle>
         <SocialMedia />
-      </LeftSide>
+      </RightWrapper>
     </Container>
   );
 }

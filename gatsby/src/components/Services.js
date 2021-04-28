@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { data } from '../data/developmentData';
-import { ServicesGrid, SubNav } from '../styles/AboutStyles';
+import { ServicesWrapper, SubNav, StyledListItem } from '../styles/AboutStyles';
 import { dataText } from '../data/meDataEn';
 
 function ItemNav({ to = '/', text }) {
@@ -18,24 +18,22 @@ function ItemNav({ to = '/', text }) {
 
 export default function Services() {
   const devData = Object.values(data).map((element) => (
-    <li className={element.color}>
-      {element.type === 'react-icons' && (
-        <span className={`icon ${element.color}`}>{element.icon()}</span>
-      )}
-
-      {element.type === 'svg' && (
-        <span className={`iconSVG ${element.color}`}>{element.icon}</span>
+    <StyledListItem color={element.color}>
+      {element.type === 'svg' ? (
+        <span className="iconSVG">{element.icon}</span>
+      ) : (
+        <span className="icon">{element.icon()}</span>
       )}
 
       <span className={`${element.color} text`}>
         <span className={`mark ${element.color}`}>{element.mark}</span>
         <span>{element.description}</span>
       </span>
-    </li>
+    </StyledListItem>
   ));
 
   return (
-    <ServicesGrid>
+    <ServicesWrapper color="--primary">
       <SubNav>
         <ItemNav text={dataText.nav1} />
         <ItemNav text={dataText.nav2} to="/1" />
@@ -44,6 +42,6 @@ export default function Services() {
       <div>
         <ul>{devData}</ul>
       </div>
-    </ServicesGrid>
+    </ServicesWrapper>
   );
 }
