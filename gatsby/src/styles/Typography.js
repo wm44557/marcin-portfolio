@@ -25,11 +25,12 @@ const Typography = createGlobalStyle`
   }
   a {
     color: var(--darkGrey);
-    text-decoration-color: var(--grey);
-    /* Chrome renders this weird with this font, so we turn it off */
-    text-decoration-skip-ink: none;
+    text-decoration: none;
     &:hover {
       color: var(--green);
+      .active{
+        color: var(--grey);
+      }
     }
 
   }
@@ -71,7 +72,6 @@ const Typography = createGlobalStyle`
     }
   }
   
-
   .center {
     text-align: center;
   }
@@ -79,6 +79,18 @@ const Typography = createGlobalStyle`
   .tilt {
     transform: rotate(-2deg);
   }
+  .hasz {
+      display: none;
+    }
+   .active{
+    color: var(--grey);
+    .hasz{
+         display: inline-block;
+         margin-right: 5px;
+    }
+   }
+  
+
 `;
 
 export default Typography;

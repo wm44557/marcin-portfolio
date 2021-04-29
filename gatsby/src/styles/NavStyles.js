@@ -22,20 +22,12 @@ export const NavStyles = styled.nav`
     }
     transition: 0.3s;
   }
-  .hasz {
-    display: none;
-  }
+
   .active {
-    color: var(--grey);
-    transform: scale(1.1);
-    .hasz {
-      display: inline-block;
-      margin-right: 5px;
-    }
+    font-size: 2.7rem;
   }
   a {
     font-size: 2.5rem;
-    text-decoration: none;
 
     @media (max-width: 800px) {
       font-size: 2rem;

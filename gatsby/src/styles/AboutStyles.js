@@ -3,7 +3,8 @@ import Image from 'gatsby-image';
 
 export const Container = styled.div`
   display: grid;
-  margin: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   grid-template-columns: 1fr auto;
   position: relative;
 
@@ -50,12 +51,11 @@ export const ImageWrapper = styled(Image)`
 
 export const LeftWrapper = styled.div`
   margin-left: 6rem;
-  .fi {
+  .myServices {
     display: inline-block;
     padding: 0.6rem;
     transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
   }
-
   h1 {
     font-size: 5rem;
     text-transform: uppercase;
@@ -64,16 +64,16 @@ export const LeftWrapper = styled.div`
   h2 {
     margin-top: 1.5rem;
     color: var(--green);
-
     span {
       color: var(--grey);
     }
   }
   p {
     margin-top: 2rem;
+    margin-bottom: 0;
   }
   h3 {
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 1rem 0;
     border-bottom: 3px solid var(--darkGrey);
   }
@@ -108,6 +108,9 @@ export const StyledListItem = styled.li`
     flex-direction: row;
     margin-top: 3rem;
     cursor: default;
+    &:first-child{
+    margin-top: 0.5rem;
+    }
     &:hover {
       .svg {
         fill: var(--${(props) => props.color});
@@ -130,26 +133,12 @@ export const SubNav = styled.ul`
   display: flex;
   justify-content: space-around;
   overflow: hidden;
+  margin-bottom: 1rem;
   li {
-    padding: 0.6rem;
-    transition: 0.3s;
-    .hasz {
-      display: none;
-    }
+    padding: 0.2rem;
     .active {
-      transform: scale(1.1);
-      color: var(--Grey);
-      .hasz {
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-    a {
-      color: var(--darkGrey);
-      text-decoration: none;
-      &:hover {
-        color: var(--green);
-      }
+      font-size: 2.2rem;
+      color: var(--grey);
     }
   }
 `;

@@ -60,13 +60,13 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary) var(--black);
+    scrollbar-color: #126060 var(--black);
   }
   body::-webkit-scrollbar-track {
     background: var(--black);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--primary) ;
+    background-color:#126060 ;
     border-radius: 6px;
     border: 3px solid var(--black);
   }

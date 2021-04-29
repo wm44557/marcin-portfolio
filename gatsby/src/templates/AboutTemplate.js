@@ -8,11 +8,11 @@ import {
   ImageWrapper,
   Circle,
 } from '../styles/AboutStyles';
-import { dataText } from '../data/meDataEn';
+import { dataText } from '../data/infomeData';
 import Services from '../components/Services';
 import SocialMedia from '../components/SocialMedia';
 
-export default function FirstPage() {
+export default function AboutTemplate() {
   const { data } = useStaticQuery(graphql`
     {
       data: file(name: { eq: "ja9" }) {
@@ -37,7 +37,7 @@ export default function FirstPage() {
         </h2>
         <p>{dataText.about}</p>
         <h3>
-          <span className="mark fi">## {dataText.sub}</span>
+          <span className="mark myServices">## {dataText.sub}</span>
         </h3>
         <Services />
       </LeftWrapper>

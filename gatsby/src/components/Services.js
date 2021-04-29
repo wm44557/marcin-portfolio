@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { data } from '../data/developmentData';
 import { ServicesWrapper, SubNav, StyledListItem } from '../styles/AboutStyles';
-import { dataText } from '../data/meDataEn';
+import { dataText } from '../data/infomeData';
 
 function ItemNav({ to = '/', text }) {
   return (
