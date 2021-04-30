@@ -20,19 +20,34 @@ export const Container = styled.div`
       display: none;
     }
   }
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const RightWrapper = styled.div`
+  margin-top: -10rem;
   margin-left: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 850px) {
+    margin-left: 0.2rem;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 0rem;
+    grid-row-start: 2;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const Circle = styled.div`
   position: relative;
   height: 200px;
   width: 200px;
+  height: clamp(100px, 20vw, 200px);
+  width: clamp(100px, 20vw, 200px);
   border-radius: 50%;
   background-color: var(--green);
 `;
@@ -43,6 +58,8 @@ export const ImageWrapper = styled(Image)`
   right: 0;
   width: 200px;
   height: 200px;
+  height: clamp(100px, 20vw, 200px);
+  width: clamp(100px, 20vw, 200px);
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--grey);
@@ -51,24 +68,18 @@ export const ImageWrapper = styled(Image)`
 
 export const LeftWrapper = styled.div`
   margin-left: 6rem;
+  grid-column-start: 1;
+
   .myServices {
     display: inline-block;
     padding: 0.6rem;
     transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
   }
-  h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-  }
-  h2 {
-    margin-top: 1.5rem;
-    color: var(--green);
-    span {
-      color: var(--grey);
-    }
+  div {
+    padding: 1rem;
   }
   p {
+    font-size: clamp(1rem, 3.5vw, 2rem);
     margin-top: 2rem;
     margin-bottom: 0;
   }
@@ -80,17 +91,49 @@ export const LeftWrapper = styled.div`
   ul {
     list-style: none;
     padding: 0;
-    margin-right: 4rem;
+    margin-right: 0;
     max-height: 500px;
     overflow: auto;
+    @media (max-width: 1100px) {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 850px) {
+    margin-left: 0.2rem;
+  }
+  @media (max-width: 1100px) {
+    order: 1;
   }
 `;
+export const InfoWrapper = styled.div`
+  margin-left: 6rem;
 
+  h1 {
+    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+  h2 {
+    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 3rem);
+    margin-top: 1.5rem;
+    color: var(--green);
+    span {
+      color: var(--grey);
+    }
+  }
+  @media (max-width: 850px) {
+    margin-left: 0.2rem;
+    margin-bottom: 1rem;
+  }
+`;
 export const ServicesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   .text {
     font-size: 1.7rem;
+    font-size: clamp(1rem, 5vw, 1.7rem);
     font-weight: 300;
     width: 100%;
   }
@@ -98,8 +141,15 @@ export const ServicesWrapper = styled.div`
   .iconSVG {
     display: flex;
     font-size: 6rem;
+    font-size: clamp(3rem, 5vw, 6rem);
     margin-right: 1.5rem;
     align-items: center;
+    @media (max-width: 450px) {
+      .svg {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
   }
 `;
 export const StyledListItem = styled.li`
@@ -108,6 +158,8 @@ export const StyledListItem = styled.li`
     flex-direction: row;
     margin-top: 3rem;
     cursor: default;
+n-items: center;
+  }
     &:first-child{
     margin-top: 0.5rem;
     }

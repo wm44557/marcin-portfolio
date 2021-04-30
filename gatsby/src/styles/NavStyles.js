@@ -42,9 +42,9 @@ export const NavStyles = styled.nav`
   p {
     display: none;
   }
+
   @media (max-width: 850px) {
-    margin-left: 0;
-    margin-top: 1rem;
+    margin: 1rem 1rem 1rem -0.5rem;
     border-right: 1px solid var(--darkGrey);
     span {
       display: none;
@@ -56,17 +56,27 @@ export const NavStyles = styled.nav`
     }
     .icon {
       display: block;
-      font-size: 3rem;
+      font-size: 2.5rem;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+
       text-align: center;
     }
     p {
       display: block;
       font-size: 1.5rem;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
       text-align: center;
       margin-top: 0;
     }
     li {
       padding-bottom: 2rem;
+    }
+  }
+  @media (max-width: 400px) {
+    padding-right: 1.3rem;
+    .icon {
+      margin: 0;
+      padding: 0;
     }
   }
 `;

@@ -7,6 +7,7 @@ import {
   RightWrapper,
   ImageWrapper,
   Circle,
+  InfoWrapper,
 } from '../styles/AboutStyles';
 import { dataText } from '../data/infomeData';
 import Services from '../components/Services';
@@ -28,14 +29,18 @@ export default function AboutTemplate() {
     <Container>
       <SEO title="About me - My Services" />
       <div className="borderleft" />
-      <LeftWrapper>
+      <InfoWrapper>
         <h1> {dataText.name}</h1>
         <h2>
           {dataText.old} <span> / </span>
           {dataText.where} <span> / </span>
           {dataText.student}
         </h2>
-        <p>{dataText.about}</p>
+      </InfoWrapper>
+      <LeftWrapper>
+        <div>
+          <p>{dataText.about}</p>
+        </div>
         <h3>
           <span className="mark myServices">## {dataText.sub}</span>
         </h3>
