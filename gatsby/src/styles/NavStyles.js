@@ -10,15 +10,15 @@ export const NavStyles = styled.nav`
     text-align: left;
   }
   li {
+    width: 100%;
     clear: both;
     --translateX: 5px;
     transform: translateX(var(--translateX));
-    margin-bottom: 4em;
     &:hover {
       --translateX: 15px;
     }
     &:last-child {
-      padding-bottom: clamp(10rem, 20vw, 30rem);
+      padding-bottom: clamp(2rem, 20vw, 10rem);
     }
     transition: 0.3s;
   }
@@ -46,6 +46,11 @@ export const NavStyles = styled.nav`
   @media (max-width: 850px) {
     margin: 1rem 1rem 1rem -0.5rem;
     border-right: 1px solid var(--darkGrey);
+    li {
+      &:hover {
+        transform: scale(1);
+      }
+    }
     span {
       display: none;
     }

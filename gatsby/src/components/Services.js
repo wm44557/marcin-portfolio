@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { data } from '../data/developmentData';
 import { ServicesWrapper, SubNav, StyledListItem } from '../styles/AboutStyles';
 import { dataText } from '../data/infomeData';
 
@@ -16,7 +15,7 @@ function ItemNav({ to = '/', text }) {
   );
 }
 
-export default function Services() {
+export default function Services({ data }) {
   const devData = Object.values(data).map((element) => (
     <StyledListItem color={element.color}>
       {element.type === 'svg' ? (
@@ -35,12 +34,12 @@ export default function Services() {
   return (
     <ServicesWrapper color="--primary">
       <SubNav>
-        <ItemNav text={dataText.nav1} />
-        <ItemNav text={dataText.nav2} to="/1" />
-        <ItemNav text={dataText.nav3} to="/2" />
+        <ItemNav text={dataText.nav1} to="/aboutme" />
+        <ItemNav text={dataText.nav2} to="/aboutme/database" />
+        <ItemNav text={dataText.nav3} to="/aboutme/tools" />
       </SubNav>
       <div>
-        <ul>{devData}</ul>
+        <ul className="devUl">{devData}</ul>
       </div>
     </ServicesWrapper>
   );

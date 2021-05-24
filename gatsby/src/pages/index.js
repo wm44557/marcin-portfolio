@@ -1,1 +1,6 @@
-export { default } from '../templates/AboutTemplate';
+export default function IndexPage() {
+  if (typeof window !== 'undefined') {
+    window.location = '/aboutme';
+  }
+  return null;
+}

@@ -62,6 +62,10 @@ const Typography = createGlobalStyle`
       transform: rotate(-4deg);
       background-color: var(--quaternary);
     }
+     &.quaternary3 {
+      transform: rotate(-4deg);
+      background-color: var(--quaternary);
+    }
     &.quinary {
       transform: rotate(3deg);
       background-color: var(--quinary);
@@ -87,6 +91,7 @@ const Typography = createGlobalStyle`
     .hasz{
          display: inline-block;
          margin-right: 5px;
+        
     }
    }
   

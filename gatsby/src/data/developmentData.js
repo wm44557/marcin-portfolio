@@ -5,13 +5,13 @@ import { SiCplusplus } from 'react-icons/si';
 import React from 'react';
 import { NestLogo, NextLogo } from '../assets/images/icons';
 
-export const data = {
+export const devData = {
   react: {
     type: 'react-icons',
     icon: FaReact,
     mark: 'React',
     description:
-      ' (styled components, redux,mobx, axios, unit tests, GraphQl) + TS/ES6',
+      ' (styled components, redux, mobx, axios, unit tests, GraphQl, rest api) + TS/ES6',
     li: 'primary',
     color: 'primary',
   },
@@ -36,7 +36,7 @@ export const data = {
     icon: FaNodeJs,
     mark: 'NodeJs',
     description:
-      ' + express, ajax, rest api, authentication, schemas, email, mvc, middleware + mongodb',
+      ' + express, ajax, rest api, authentication, schemas, api,  email, mvc, middleware + mongodb',
     color: 'quaternary',
   },
   php: {
@@ -49,7 +49,7 @@ export const data = {
   nest: {
     type: 'svg',
     icon: <NestLogo width="60px" height="60px" className="svg" />,
-    mark: 'PHP',
+    mark: 'NestJs',
     description:
       '(NodeJS framework) in learning.. + MySQL & MariaDB or mongoose + TS,CRON auth, validation, mails',
     color: 'senary',

@@ -77,7 +77,10 @@ export const LeftWrapper = styled.div`
   }
   div {
     padding: 1rem;
+    padding-left: 0;
+    padding-top: 0;
   }
+
   p {
     font-size: clamp(1rem, 3.5vw, 2rem);
     margin-top: 2rem;
@@ -87,6 +90,12 @@ export const LeftWrapper = styled.div`
     margin-top: 1rem;
     padding: 1rem 0;
     border-bottom: 3px solid var(--darkGrey);
+    @media (max-width: 450px) {
+      .mark {
+        font-size: 1.2rem;
+      }
+      margin-top: -2rem;
+    }
   }
   ul {
     list-style: none;
@@ -103,6 +112,13 @@ export const LeftWrapper = styled.div`
   }
   @media (max-width: 1100px) {
     order: 1;
+  }
+  @media (max-width: 450px) {
+    .about {
+      padding: 2rem;
+      padding-left: 0;
+      padding-right: 4rem;
+    }
   }
 `;
 export const InfoWrapper = styled.div`
@@ -144,40 +160,55 @@ export const ServicesWrapper = styled.div`
     font-size: clamp(3rem, 5vw, 6rem);
     margin-right: 1.5rem;
     align-items: center;
-    @media (max-width: 450px) {
+
+    @media (max-width: 550px) {
       .svg {
         width: 30px !important;
         height: 30px !important;
+      }
+      .devUl {
+        margin-top: 0;
       }
     }
   }
 `;
 export const StyledListItem = styled.li`
-    display: flex;
-    color: var(--grey);
-    flex-direction: row;
-    margin-top: 3rem;
-    cursor: default;
-n-items: center;
+  display: flex;
+  color: var(--grey);
+  flex-direction: row;
+  margin-top: 3rem;
+  cursor: default;
+  align-items: center;
+  transition: 0.3s;
+
+  .text {
+    font-size: clamp(1rem, 3vw, 2rem);
   }
-    &:first-child{
+  .mark {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+  }
+  &:first-child {
     margin-top: 0.5rem;
+  }
+  &:hover {
+    .svg {
+      transition: 0.3s;
+      fill: var(--${(props) => props.color});
     }
-    &:hover {
-      .svg {
-        fill: var(--${(props) => props.color});
-      }
-      & .text {
-        background-color: var(--${(props) => props.color});
-        padding-bottom: 1rem;
-      }
-      & .icon {
-        color:  var(--${(props) => props.color})
-      }
-      & .mark {
-        background-color: var(--black);
-        margin: 1rem;
-      }
+    & .text {
+      transition: 0.3s;
+      background-color: var(--${(props) => props.color});
+      padding-bottom: 1rem;
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+    & .icon {
+      transition: 0.3s;
+      color: var(--${(props) => props.color});
+    }
+    & .mark {
+      transition: 0.3s;
+      background-color: var(--black);
+      margin: 1rem;
     }
   }
 `;
@@ -185,12 +216,24 @@ export const SubNav = styled.ul`
   display: flex;
   justify-content: space-around;
   overflow: hidden;
+
   margin-bottom: 1rem;
   li {
     padding: 0.2rem;
+    font-size: clamp(1rem, 4vw, 2rem);
+
     .active {
-      font-size: 2.2rem;
+      font-size: clamp(1.3rem, 4vw, 2.2rem);
       color: var(--grey);
     }
+  }
+  @media (max-width: 450px) {
+    padding: 0;
+    margin: 0;
+    margin-top: 1.5rem;
+    li {
+      padding-right: 1rem;
+    }
+    justify-content: flex-start;
   }
 `;

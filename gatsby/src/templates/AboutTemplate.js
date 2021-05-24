@@ -12,8 +12,11 @@ import {
 import { dataText } from '../data/infomeData';
 import Services from '../components/Services';
 import SocialMedia from '../components/SocialMedia';
+import { devData } from '../data/developmentData';
+import { dbData } from '../data/databaseData';
+import { tData } from '../data/toolsData';
 
-export default function AboutTemplate() {
+export default function AboutTemplate({ pageContext: { slug } }) {
   const { data } = useStaticQuery(graphql`
     {
       data: file(name: { eq: "ja9" }) {
@@ -25,6 +28,14 @@ export default function AboutTemplate() {
       }
     }
   `);
+  let aboutData;
+  if (slug === 'database') {
+    aboutData = dbData;
+  } else if (slug === 'tools') {
+    aboutData = tData;
+  } else {
+    aboutData = devData;
+  }
   return (
     <Container>
       <SEO title="About me - My Services" />
@@ -38,13 +49,13 @@ export default function AboutTemplate() {
         </h2>
       </InfoWrapper>
       <LeftWrapper>
-        <div>
+        <div className="about">
           <p>{dataText.about}</p>
         </div>
         <h3>
           <span className="mark myServices">## {dataText.sub}</span>
         </h3>
-        <Services />
+        <Services data={aboutData} />
       </LeftWrapper>
       <RightWrapper>
         <Circle>

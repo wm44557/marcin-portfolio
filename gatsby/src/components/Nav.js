@@ -7,24 +7,31 @@ import { FaRegEnvelopeOpen } from 'react-icons/fa';
 import { NavStyles } from '../styles/NavStyles';
 
 function ItemNav({ to = '/', text, short, icon }) {
+  const isPartiallyActive = ({ isPartiallyCurrent }) =>
+    isPartiallyCurrent ? { className: 'active' } : null;
   return (
-    <li>
-      <Link to={to} activeClassName="active">
+    <Link to={to} activeClassName="active" getProps={isPartiallyActive}>
+      <li>
         <span className="hasz"># </span>
         <span>{text}</span>
         <div className="icon">
           {icon()}
-          <p>{short}</p>
+          <p style={{ width: '100%' }}>{short}</p>
         </div>
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 }
 export default function Nav() {
   return (
     <NavStyles>
       <ul>
-        <ItemNav icon={IoPersonOutline} text="about me" short="me" />
+        <ItemNav
+          icon={IoPersonOutline}
+          text="about me"
+          short="me"
+          to="/aboutme"
+        />
         <ItemNav icon={BiBookOpen} text="resume" short="cv" to="/resume" />
         <ItemNav
           icon={BsCollection}
