@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import SEO from '../components/SEO';
 import {
@@ -15,19 +15,11 @@ import SocialMedia from '../components/SocialMedia';
 import { devData } from '../data/developmentData';
 import { dbData } from '../data/databaseData';
 import { tData } from '../data/toolsData';
+import Servvices from '../components/Servvices';
 
-export default function AboutTemplate({ pageContext: { slug } }) {
-  const { data } = useStaticQuery(graphql`
-    {
-      data: file(name: { eq: "ja9" }) {
-        childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200, quality: 98) {
-            src
-          }
-        }
-      }
-    }
-  `);
+export default function AboutTemplate({ pageContext: { slug }, data }) {
+  console.log(data);
+
   let aboutData;
   if (slug === 'database') {
     aboutData = dbData;
@@ -36,6 +28,7 @@ export default function AboutTemplate({ pageContext: { slug } }) {
   } else {
     aboutData = devData;
   }
+
   return (
     <Container>
       <SEO title="About me - My Services" />
@@ -55,14 +48,82 @@ export default function AboutTemplate({ pageContext: { slug } }) {
         <h3>
           <span className="mark myServices">## {dataText.sub}</span>
         </h3>
-        <Services data={aboutData} />
+
+        {slug === 'development' && <Servvices data={data.development} />}
+        {slug === 'database' && <Servvices data={data.database} />}
+        {slug === 'tools' && <Servvices data={data.tools} />}
       </LeftWrapper>
       <RightWrapper>
         <Circle>
-           <ImageWrapper fluid={data.childImageSharp.fluid} />
+          <ImageWrapper fluid={data.file.childImageSharp.fluid} />
         </Circle>
         <SocialMedia />
       </RightWrapper>
     </Container>
   );
 }
+export const query = graphql`
+  query {
+    development: allSanityDevelopment {
+      edges {
+        node {
+          id
+          color
+          name
+          description
+          image {
+            asset {
+              fluid(maxWidth: 60, maxHeight: 60) {
+                ...GatsbySanityImageFluid
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+    database: allSanityDatabase {
+      edges {
+        node {
+          id
+          color
+          name
+          description
+          image {
+            asset {
+              fluid(maxWidth: 60, maxHeight: 60) {
+                ...GatsbySanityImageFluid
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+    tools: allSanityTools {
+      edges {
+        node {
+          id
+          color
+          name
+          description
+          image {
+            asset {
+              fluid(maxWidth: 60, maxHeight: 60) {
+                ...GatsbySanityImageFluid
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+    file(name: { eq: "ja9" }) {
+      childImageSharp {
+        fluid(maxWidth: 200, maxHeight: 200, quality: 98) {
+          src
+        }
+      }
+    }
+  }
+`;

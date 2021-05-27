@@ -1,6 +1,21 @@
 import styled from 'styled-components';
-import Image from 'gatsby-image';
+import Img from 'gatsby-image';
 
+export const ImgStyled = styled(Img)`
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  @media (max-width: 550px) {
+    width: 30px !important;
+    height: 30px !important;
+    .devUl {
+      margin-top: 0;
+    }
+  }
+  filter: invert(72%) sepia(0%) saturate(12%) hue-rotate(210deg)
+    brightness(113%) contrast(96%);
+`;
 export const Container = styled.div`
   display: grid;
   margin-top: 2rem;
@@ -52,7 +67,7 @@ export const Circle = styled.div`
   background-color: var(--green);
 `;
 
-export const ImageWrapper = styled(Image)`
+export const ImageWrapper = styled(Img)`
   position: absolute !important;
   top: 0;
   right: 0;
@@ -157,6 +172,7 @@ export const ServicesWrapper = styled.div`
   .iconSVG {
     display: flex;
     font-size: 6rem;
+
     font-size: clamp(3rem, 5vw, 6rem);
     margin-right: 1.5rem;
     align-items: center;
@@ -172,6 +188,7 @@ export const ServicesWrapper = styled.div`
     }
   }
 `;
+
 export const StyledListItem = styled.li`
   display: flex;
   color: var(--grey);
@@ -192,21 +209,43 @@ export const StyledListItem = styled.li`
   }
   &:hover {
     .svg {
-      transition: 0.3s;
-      fill: var(--${(props) => props.color});
+      &.primary {
+        filter: invert(27%) sepia(15%) saturate(2992%) hue-rotate(134deg)
+          brightness(97%) contrast(86%);
+      }
+      &.secondary {
+        filter: invert(25%) sepia(99%) saturate(863%) hue-rotate(157deg)
+          brightness(101%) contrast(91%);
+      }
+      &.tertiary {
+        filter: invert(38%) sepia(65%) saturate(443%) hue-rotate(164deg)
+          brightness(95%) contrast(82%);
+      }
+      &.quaternary {
+        filter: invert(49%) sepia(22%) saturate(668%) hue-rotate(201deg)
+          brightness(96%) contrast(90%);
+      }
+      &.quinary {
+        filter: invert(55%) sepia(16%) saturate(826%) hue-rotate(253deg)
+          brightness(95%) contrast(94%);
+      }
+      &.senary {
+        filter: invert(88%) sepia(17%) saturate(5478%) hue-rotate(291deg)
+          brightness(87%) contrast(93%);
+      }
     }
     & .text {
-      transition: 0.3s;
+      transition: 0.1s;
       background-color: var(--${(props) => props.color});
       padding-bottom: 1rem;
       font-size: clamp(1rem, 2vw, 2rem);
     }
     & .icon {
-      transition: 0.3s;
+      transition: 0.1s;
       color: var(--${(props) => props.color});
     }
     & .mark {
-      transition: 0.3s;
+      transition: 0.1s;
       background-color: var(--black);
       margin: 1rem;
     }
