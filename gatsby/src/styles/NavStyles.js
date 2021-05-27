@@ -10,7 +10,6 @@ export const NavStyles = styled.nav`
     text-align: left;
   }
   li {
-    width: 100%;
     clear: both;
     --translateX: 5px;
     transform: translateX(var(--translateX));

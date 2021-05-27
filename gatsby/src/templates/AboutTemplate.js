@@ -59,7 +59,7 @@ export default function AboutTemplate({ pageContext: { slug } }) {
       </LeftWrapper>
       <RightWrapper>
         <Circle>
-          <ImageWrapper fluid={data.childImageSharp.fluid} />
+           <ImageWrapper fluid={data.childImageSharp.fluid} />
         </Circle>
         <SocialMedia />
       </RightWrapper>

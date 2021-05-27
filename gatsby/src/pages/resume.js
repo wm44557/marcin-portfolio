@@ -33,7 +33,7 @@ export default function Resume() {
       <SEO title="About me - My Services" />
       <LeftWrapper>
         <Circle>
-          <ImageWrapper fluid={data.childImageSharp.fluid} />
+           <ImageWrapper fluid={data.childImageSharp.fluid} />
         </Circle>
         <InfoWrapper>
           <h1>

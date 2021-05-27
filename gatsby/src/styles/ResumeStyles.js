@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-bottom: 2rem;
   grid-template-columns: minmax(200px, auto) 1fr;
   position: relative;
-  margin-left: -50px;
+  //margin-left: -50px;
   .bold {
     font-weight: 800;
   }

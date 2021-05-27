@@ -3,6 +3,10 @@ import path, { resolve } from 'path';
 async function aboutMePage({ actions }) {
   const aboutTemplate = path.resolve('./src/templates/AboutTemplate.js');
   const data = {
+    dev: {
+      route: '/aboutme',
+      slug: '/',
+    },
     database: {
       route: '/aboutme/database',
       slug: 'database',
