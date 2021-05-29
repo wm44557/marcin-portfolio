@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { BiBookOpen } from 'react-icons/bi';
 import { IoPersonOutline } from 'react-icons/io5';
 import { BsCollection } from 'react-icons/bs';
 import { FaRegEnvelopeOpen } from 'react-icons/fa';
 import { NavStyles } from '../styles/NavStyles';
+import LangContext from './LanguageContext';
+import { navEn, navPl } from '../data/text';
 
 function ItemNav({ to = '/', text, short, icon }) {
   const isPartiallyActive = ({ isPartiallyCurrent }) =>
@@ -23,25 +25,27 @@ function ItemNav({ to = '/', text, short, icon }) {
   );
 }
 export default function Nav() {
+  const [current] = useContext(LangContext);
+  const text = current === 'pl' ? navPl : navEn;
   return (
     <NavStyles>
       <ul>
         <ItemNav
           icon={IoPersonOutline}
-          text="about me"
+          text={text.me}
           short="me"
           to="/aboutme"
         />
-        <ItemNav icon={BiBookOpen} text="resume" short="cv" to="/resume" />
+        <ItemNav icon={BiBookOpen} text={text.cv} short="cv" to="/resume" />
         <ItemNav
           icon={BsCollection}
-          text="projects"
+          text={text.prj}
           short="prj"
           to="/projects"
         />
         <ItemNav
           icon={FaRegEnvelopeOpen}
-          text="contact"
+          text={text.ct}
           short="ct"
           to="/contact"
         />

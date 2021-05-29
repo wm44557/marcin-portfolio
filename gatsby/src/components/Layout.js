@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { IoLanguageSharp } from 'react-icons/io5';
 import GlobalStyles from '../styles/GlobalStyles';
 import Nav from './Nav';
 import Typography from '../styles/Typography';
+import LangContext from './LanguageContext';
 
-const ContentStyles = styled.div`
-  background: red;
-  padding: 2rem;
-`;
 const SiteBorderStyles = styled.div`
+  position: relative;
   max-width: 1300px;
   margin: 5rem auto 4rem auto;
   margin-top: clamp(2rem, 10vw, 5rem);
@@ -24,13 +23,53 @@ const SiteBorderStyles = styled.div`
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
+  .lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(10%, -50%) rotate(4deg);
+    padding: 1px;
+    div {
+      margin: 2px;
+      margin-left: 10px;
+      padding: 3px;
+      color: black;
+      &:hover {
+        border-bottom: 2px solid var(--grey);
+        cursor: pointer;
+      }
+    }
+    .active {
+      border-bottom: 2px solid var(--grey);
+      color: var(--grey);
+    }
+  }
 `;
 export default function Layout({ children }) {
+  const [current, setCurrent] = useContext(LangContext);
+
   return (
     <>
       <Typography />
       <GlobalStyles />
       <SiteBorderStyles>
+        <div className="mark lang">
+          <IoLanguageSharp />
+          <div
+            className={current === 'pl' && 'active'}
+            onClick={() => setCurrent('pl')}
+          >
+            pl
+          </div>
+          <div
+            className={current === 'en' && 'active'}
+            onClick={() => setCurrent('en')}
+          >
+            en
+          </div>
+        </div>
         <Nav />
         {children}
       </SiteBorderStyles>

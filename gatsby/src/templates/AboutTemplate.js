@@ -1,5 +1,5 @@
-import React, { lazy, useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useContext } from 'react';
+import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import {
   Container,
@@ -9,49 +9,38 @@ import {
   Circle,
   InfoWrapper,
 } from '../styles/AboutStyles';
-import { dataText } from '../data/infomeData';
 import Services from '../components/Services';
 import SocialMedia from '../components/SocialMedia';
-import { devData } from '../data/developmentData';
-import { dbData } from '../data/databaseData';
-import { tData } from '../data/toolsData';
-import Servvices from '../components/Servvices';
+import { aboutPl, aboutEn } from '../data/text';
+import LangContext from '../components/LanguageContext';
 
 export default function AboutTemplate({ pageContext: { slug }, data }) {
-  console.log(data);
-
-  let aboutData;
-  if (slug === 'database') {
-    aboutData = dbData;
-  } else if (slug === 'tools') {
-    aboutData = tData;
-  } else {
-    aboutData = devData;
-  }
-
+  const [current] = useContext(LangContext);
+  const text = current === 'pl' ? aboutPl : aboutEn;
   return (
     <Container>
       <SEO title="About me - My Services" />
       <div className="borderleft" />
       <InfoWrapper>
-        <h1> {dataText.name}</h1>
+        <h1> {text.name}</h1>
         <h2>
-          {dataText.old} <span> / </span>
-          {dataText.where} <span> / </span>
-          {dataText.student}
+          {text.old} <span> / </span>
+          {text.where} <span> / </span>
+          {text.student}
         </h2>
       </InfoWrapper>
       <LeftWrapper>
         <div className="about">
-          <p>{dataText.about}</p>
+          <p>{text.about}</p>
         </div>
         <h3>
-          <span className="mark myServices">## {dataText.sub}</span>
+          <span className="mark myServices">## {text.sub}</span>
         </h3>
-
-        {slug === 'development' && <Servvices data={data.development} />}
-        {slug === 'database' && <Servvices data={data.database} />}
-        {slug === 'tools' && <Servvices data={data.tools} />}
+        {slug === 'development' && (
+          <Services data={data.development} text={text} />
+        )}
+        {slug === 'database' && <Services data={data.database} text={text} />}
+        {slug === 'tools' && <Services data={data.tools} text={text} />}
       </LeftWrapper>
       <RightWrapper>
         <Circle>
@@ -64,7 +53,9 @@ export default function AboutTemplate({ pageContext: { slug }, data }) {
 }
 export const query = graphql`
   query {
-    development: allSanityDevelopment {
+    development: allSanityDevelopment(
+      sort: { fields: [order], order: [ASC, DESC] }
+    ) {
       edges {
         node {
           id
@@ -82,7 +73,7 @@ export const query = graphql`
         }
       }
     }
-    database: allSanityDatabase {
+    database: allSanityDatabase(sort: { fields: [order], order: [ASC, DESC] }) {
       edges {
         node {
           id
@@ -100,7 +91,7 @@ export const query = graphql`
         }
       }
     }
-    tools: allSanityTools {
+    tools: allSanityTools(sort: { fields: [order], order: [ASC, DESC] }) {
       edges {
         node {
           id

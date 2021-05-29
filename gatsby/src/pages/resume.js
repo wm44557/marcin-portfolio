@@ -13,8 +13,6 @@ import {
   RightWrapper,
   InfoWrapper,
 } from '../styles/ResumeStyles';
-import { dataResume } from '../data/dataResume';
-import { dataText } from '../data/infomeData';
 
 export default function Resume() {
   const { data } = useStaticQuery(graphql`
@@ -33,7 +31,7 @@ export default function Resume() {
       <SEO title="About me - My Services" />
       <LeftWrapper>
         <Circle>
-           <ImageWrapper fluid={data.childImageSharp.fluid} />
+          <ImageWrapper fluid={data.childImageSharp.fluid} />
         </Circle>
         <InfoWrapper>
           <h1>
