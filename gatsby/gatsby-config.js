@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 
-
 dotenv.config({ path: '.env' });
 
 export default {
@@ -31,6 +30,7 @@ export default {
         token: process.env.SANITY_TOKEN,
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],

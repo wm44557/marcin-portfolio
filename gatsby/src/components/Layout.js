@@ -9,7 +9,7 @@ import LangContext from './LanguageContext';
 const SiteBorderStyles = styled.div`
   position: relative;
   max-width: 1300px;
-  margin: 5rem auto 4rem auto;
+  margin: 3rem auto 2rem auto;
   margin-top: clamp(2rem, 10vw, 5rem);
   background-color: rgba(20, 19, 19, 0.75);
   padding: 5px;
@@ -19,6 +19,7 @@ const SiteBorderStyles = styled.div`
   box-shadow: 0px 0px 5px 0px rgba(64, 64, 64, 0.55);
   display: grid;
   grid-template-columns: auto 1fr;
+
   @media (max-width: 1100px) {
     margin-left: 1.5rem;
     margin-right: 1.5rem;

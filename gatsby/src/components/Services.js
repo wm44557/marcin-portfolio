@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import {
   ServicesWrapper,
@@ -6,6 +6,7 @@ import {
   StyledListItem,
   ImgStyled,
 } from '../styles/AboutStyles';
+import LangContext from './LanguageContext';
 
 function ItemNav({ to = '/', text }) {
   return (
@@ -20,6 +21,8 @@ function ItemNav({ to = '/', text }) {
 }
 
 export default function Services({ data, text }) {
+  const [current] = useContext(LangContext);
+
   const devData = data.edges.map((element) => (
     <StyledListItem color={element.node.color} key={element.node.id}>
       <div style={{ overflow: 'visible' }}>
@@ -34,7 +37,11 @@ export default function Services({ data, text }) {
         <span className={`mark ${element.node.color}`}>
           {element.node.name}
         </span>
-        <span>{element.node.description}</span>
+        <span>
+          {current === 'pl'
+            ? element.node.descriptionpl
+            : element.node.description}
+        </span>
       </span>
     </StyledListItem>
   ));

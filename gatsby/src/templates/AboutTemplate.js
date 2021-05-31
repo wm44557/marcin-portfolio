@@ -62,6 +62,7 @@ export const query = graphql`
           color
           name
           description
+          descriptionpl
           image {
             asset {
               fluid(maxWidth: 60, maxHeight: 60) {
@@ -80,6 +81,7 @@ export const query = graphql`
           color
           name
           description
+          descriptionpl
           image {
             asset {
               fluid(maxWidth: 60, maxHeight: 60) {
@@ -98,6 +100,7 @@ export const query = graphql`
           color
           name
           description
+          descriptionpl
           image {
             asset {
               fluid(maxWidth: 60, maxHeight: 60) {

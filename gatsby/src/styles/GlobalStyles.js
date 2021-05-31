@@ -26,7 +26,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: 2rem;
     color: var(--grey);
-  }
+    overflow-x: hidden;
+    }
 
   fieldset {
     border-color: rgba(0,0,0,0.1);

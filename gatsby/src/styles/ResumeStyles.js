@@ -7,7 +7,6 @@ export const Container = styled.div`
   margin-bottom: 2rem;
   grid-template-columns: minmax(200px, auto) 1fr;
   position: relative;
-  //margin-left: -50px;
   .bold {
     font-weight: 800;
   }
@@ -77,7 +76,6 @@ export const LeftWrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   margin: 0 auto;
-
   margin-top: 30px;
   max-width: 380px;
   h1 {
@@ -99,42 +97,69 @@ export const InfoWrapper = styled.div`
     text-align: center;
   }
 
-  .profilep {
-    font-size: 1rem;
-    font-size: clamp(1.5rem, 1vw, 2rem);
-    text-align: center;
-  }
-  .wrap {
-    margin: 0 auto;
-    width: 80%;
-  }
-  .number {
+  .primaryBorder {
     border-bottom: 2px solid var(--primary);
   }
-  .adress {
+  .secondaryBorder {
     border-bottom: 2px solid var(--secondary);
   }
-  .email {
-    color: var(--secondary);
-    font-weight: 600;
-  }
-
-  .ad {
+  .tertiaryBorder {
     border-bottom: 2px solid var(--tertiary);
   }
-  .adh {
-    color: var(--tertiary);
+  .quaternaryBorder {
+    border-bottom: 2px solid var(--quaternary);
+  }
+`;
+export const LeftSingleWrapper = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  font-size: 1rem;
+  font-size: clamp(1.5rem, 1vw, 2rem);
+  text-align: center;
+`;
+export const RightSingleWrapper = styled.div`
+  padding: 1rem;
+  padding-left: 0;
+  padding-top: 0;
+`;
+export const InfoSingleWrapper = styled.div`
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-size: clamp(1.5rem, 1vw, 1.5rem);
+  h1 {
+    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 90%;
+    margin: 0 auto;
+  }
+  h2 {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    font-size: clamp(1.5rem, 1vw, 1.5rem);
+    text-transform: uppercase;
+  }
+  }
+  span {
+    color: var(--darkGrey);
     font-weight: 600;
   }
-  //h2 {
-  //  font-size: 2rem;
-  //  font-size: clamp(1rem, 4vw, 3rem);
-  //  margin-top: 1.5rem;
-  //  color: var(--green);
-  //  span {
-  //    color: var(--grey);
-  //  }
-  //}
+  p {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    margin-top: 2rem;
+    margin-bottom: 0;
+    span {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
 `;
 export const RightWrapper = styled.div`
   overflow: auto;
@@ -145,30 +170,13 @@ export const RightWrapper = styled.div`
     padding: 0.6rem;
     transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
   }
-  span.smallText {
-    color: var(--darkGrey);
-  }
+
   div {
     padding: 1rem;
     padding-left: 0;
     padding-top: 0;
   }
-  h2 {
-    font-size: 1rem;
-    font-size: clamp(1.5rem, 1vw, 1.5rem);
-    text-transform: uppercase;
-  }
-  .info {
-    padding: 20px;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-  }
-  p {
-    font-size: clamp(1rem, 3.5vw, 2rem);
-    margin-top: 2rem;
-    margin-bottom: 0;
-  }
+
   h3 {
     margin-top: 1rem;
     padding: 1rem 0;
