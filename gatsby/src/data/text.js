@@ -143,3 +143,11 @@ export const resumePl = {
     desc: 'Szachy - Tennis - Blockchain i kryptowaluty',
   },
 };
+export const projectsPl = {
+  group: 'grupowy',
+  solo: 'indywidualny',
+};
+export const projectsEn = {
+  group: 'group',
+  solo: 'individual',
+};
