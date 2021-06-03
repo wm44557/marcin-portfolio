@@ -14,7 +14,7 @@ export default function Projects({ data }) {
     <ProjectGrid>
       {projects.map((person) => (
         <ProjectStyles key={person.node.id}>
-          <Link to={`/${person.node.slug.current}`}>
+          <Link to={`/project/${person.node.slug.current}`}>
             <h2>
               <span
                 className={`${person.node.isGroup ? 'mark tertiary' : 'mark'}`}

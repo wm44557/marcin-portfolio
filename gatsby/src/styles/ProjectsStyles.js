@@ -70,7 +70,6 @@ export const ProjectStyles = styled.div`
   .group {
     color: var(--black);
     text-align: center;
-    //background: var(--grey);
     text-transform: uppercase;
     width: 50%;
     margin: 0 auto;

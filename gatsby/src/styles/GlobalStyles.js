@@ -15,7 +15,8 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #CBCBCB;
     --darkGrey:#464646;
-    
+    --swiper-theme-color: #126060;
+
   }
   html {
   
@@ -27,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2rem;
     color: var(--grey);
     overflow-x: hidden;
+    
     }
 
   fieldset {
@@ -81,7 +83,39 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     display: inline-block;
   }
-
+  .swiper-container {
+        width: 280px;
+        }
+                  @media screen and (min-width:440px) {
+          .swiper-container {
+            width: 340px;
+          }
+        }
+        
+             @media screen and (min-width: 540px) {
+          .swiper-container {
+            width: 470px;
+          }
+        }
+        
+        
+        @media screen and (min-width: 640px) {
+          .swiper-container {
+            width: 500px;
+          }
+        }
+        
+   @media screen and (min-width: 768px) {
+      .swiper-container {
+            width: 668px;
+          }
+        }
+  @media screen and (min-width: 1200px) {
+      .swiper-container {
+            width: 863px;
+          }
+        }
+  
 `;
 
 export default GlobalStyles;
