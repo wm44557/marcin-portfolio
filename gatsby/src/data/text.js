@@ -151,3 +151,15 @@ export const projectsEn = {
   group: 'group',
   solo: 'individual',
 };
+export const singleProjectPl = {
+  group: 'Projekt realizowany grupowo',
+  solo: 'Projekt realizowany indywidualnie',
+  description: '#o projekcie',
+  tech: '#technologie',
+};
+export const singleProjectEn = {
+  group: 'group',
+  solo: 'individual',
+  description: '#description',
+  tech: '#technologies',
+};

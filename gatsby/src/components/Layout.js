@@ -59,13 +59,13 @@ export default function Layout({ children }) {
         <div className="mark lang">
           <IoLanguageSharp />
           <div
-            className={current === 'pl' && 'active'}
+            className={current === 'pl' ? 'active' : null}
             onClick={() => setCurrent('pl')}
           >
             pl
           </div>
           <div
-            className={current === 'en' && 'active'}
+            className={current === 'en' ? 'active' : null}
             onClick={() => setCurrent('en')}
           >
             en

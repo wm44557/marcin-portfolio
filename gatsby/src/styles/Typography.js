@@ -49,7 +49,14 @@ const Typography = createGlobalStyle`
     &.primary {
       transform: rotate(3deg);
       background-color: var(--primary);
+      &.normal {
+        transform: rotate(0);
+      }
+      &.medium {
+        transform: rotate(1.5deg);
+      }
     }
+
     &.secondary {
       transform: rotate(-3deg);
       background-color: #0c6c83;
@@ -57,7 +64,14 @@ const Typography = createGlobalStyle`
     &.tertiary {
       transform: rotate(3deg);
       background-color: var(--tertiary);
+      &.normal {
+        transform: rotate(0);
+      }
+      &.medium {
+        transform: rotate(1.5deg);
+      }
     }
+    
     &.quaternary {
       transform: rotate(-4deg);
       background-color: var(--quaternary);

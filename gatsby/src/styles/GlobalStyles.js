@@ -110,7 +110,7 @@ const GlobalStyles = createGlobalStyle`
             width: 668px;
           }
         }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1000px) {
       .swiper-container {
             width: 863px;
           }

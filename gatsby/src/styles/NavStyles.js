@@ -23,18 +23,18 @@ export const NavStyles = styled.nav`
   }
 
   .active {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
   a {
-    font-size: 2.5rem;
+    font-size: 2rem;
 
     @media (max-width: 800px) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
   .icon {
     float: right;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: 2rem;
     transform: translateY(-15%);
   }

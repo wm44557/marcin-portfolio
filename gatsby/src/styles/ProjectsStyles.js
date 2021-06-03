@@ -87,5 +87,8 @@ export const ProjectStyles = styled.div`
     &:hover .overlay {
       opacity: 0.8;
     }
+    &:active .overlay {
+      opacity: 0.8;
+    }
   }
 `;
