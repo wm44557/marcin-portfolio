@@ -32,7 +32,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
   fieldset {
-    border-color: rgba(0,0,0,0.1);
+    //border-color: rgba(0,0,0,0.1);
+    border-color: var(--darkGrey);
+    opacity: 0.2;
     border-width: 1px;
   }
 
