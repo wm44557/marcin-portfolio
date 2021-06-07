@@ -52,6 +52,9 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       --cast: 4px;
     }
+    &:disabled{
+      background-color: var(--darkGrey);
+    }
   }
 
   .gatsby-image-wrapper img[src*=base64\\,] {
@@ -88,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
   .swiper-container {
         width: 280px;
         }
-                  @media screen and (min-width:440px) {
+         @media screen and (min-width:440px) {
           .swiper-container {
             width: 340px;
           }
@@ -107,16 +110,16 @@ const GlobalStyles = createGlobalStyle`
           }
         }
         
-   @media screen and (min-width: 768px) {
-      .swiper-container {
-            width: 668px;
-          }
-        }
-  @media screen and (min-width: 1000px) {
-      .swiper-container {
-            width: 863px;
-          }
-        }
+        @media screen and (min-width: 768px) {
+          .swiper-container {
+                width: 668px;
+              }
+            }
+        @media screen and (min-width: 1000px) {
+          .swiper-container {
+                width: 863px;
+              }
+            }
   
 `;
 

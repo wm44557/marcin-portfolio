@@ -3,8 +3,8 @@ import Img from 'gatsby-image';
 
 export const ImgStyled = styled(Img)`
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   @media (max-width: 550px) {
     width: 30px !important;

@@ -9,6 +9,9 @@ export const StyledForm = styled.form`
   .info {
     margin-bottom: 0.5rem;
   }
+  .mapleSyrup {
+    display: none;
+  }
   button {
     display: block;
     margin: 0 auto;
@@ -34,7 +37,7 @@ export const StyledInputField = styled.div`
     position: absolute;
     left: 0;
     width: 100%;
-    font-size: 14px;
+    font-size: 18px;
     top: 9px;
     color: var(--grey);
     transition: 0.45s;
@@ -49,6 +52,7 @@ export const StyledInputField = styled.div`
     border: 0;
     padding: 4px 0;
     border-bottom: 2px solid var(--darkGrey);
+    color: var(--primary);
     background-color: transparent;
     &:focus ~ span:before,
     &:focus ~ span:after {
@@ -57,10 +61,14 @@ export const StyledInputField = styled.div`
     }
     &:focus ~ label {
       top: -16px;
-      font-size: 12px;
-      color: var(--primary);
+      font-size: 14px;
+      color: white;
       transition: 0.45s;
+      display: inline;
     }
+  }
+  .hidden {
+    display: none;
   }
   textarea {
     height: 200px;

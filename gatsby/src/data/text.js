@@ -163,3 +163,19 @@ export const singleProjectEn = {
   description: '#description',
   tech: '#technologies',
 };
+export const contactPl = {
+  email: 'e-mail',
+  title: 'tytuł',
+  description: 'opis',
+  phone: 'Telefon',
+  button: 'wyślij wiadomość',
+  form: 'Formularz kontaktowy',
+};
+export const contactEn = {
+  email: 'e-mail',
+  title: 'title',
+  phone: 'Phone',
+  description: 'description',
+  button: 'send message',
+  form: 'Contact form',
+};

@@ -65,7 +65,7 @@ export const query = graphql`
           descriptionpl
           image {
             asset {
-              fluid(maxWidth: 60, maxHeight: 60) {
+              fluid(maxWidth: 40, maxHeight: 40) {
                 ...GatsbySanityImageFluid
                 src
               }
@@ -84,7 +84,7 @@ export const query = graphql`
           descriptionpl
           image {
             asset {
-              fluid(maxWidth: 60, maxHeight: 60) {
+              fluid(maxWidth: 40, maxHeight: 40) {
                 ...GatsbySanityImageFluid
                 src
               }
@@ -103,7 +103,7 @@ export const query = graphql`
           descriptionpl
           image {
             asset {
-              fluid(maxWidth: 60, maxHeight: 60) {
+              fluid(maxWidth: 40, maxHeight: 40) {
                 ...GatsbySanityImageFluid
                 src
               }
