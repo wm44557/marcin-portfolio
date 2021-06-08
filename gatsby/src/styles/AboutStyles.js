@@ -65,6 +65,10 @@ export const Circle = styled.div`
   width: clamp(100px, 20vw, 200px);
   border-radius: 50%;
   background-color: var(--green);
+  @media (max-width: 500px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
 
 export const ImageWrapper = styled(Img)`
@@ -79,6 +83,10 @@ export const ImageWrapper = styled(Img)`
   border-radius: 50%;
   border: 3px solid var(--grey);
   transform: translate(-15px, -5px);
+  @media (max-width: 500px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
 
 export const LeftWrapper = styled.div`

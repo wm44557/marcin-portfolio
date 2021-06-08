@@ -49,6 +49,14 @@ const WrappedSocials = styled.ul`
         padding: 1.5rem;
       }
     }
+    @media (max-width: 500px) {
+      padding: 0.3rem;
+      margin-right: 0.3rem;
+      li {
+        margin-right: 0;
+        padding: 0.5rem;
+      }
+    }
   }
 `;
 export default function SocialMedia() {
