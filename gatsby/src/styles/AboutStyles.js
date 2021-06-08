@@ -151,11 +151,17 @@ export const InfoWrapper = styled.div`
     font-size: clamp(2rem, 5vw, 5rem);
     text-transform: uppercase;
     letter-spacing: 10px;
+    @media (max-width: 550px) {
+      font-size: 2rem;
+    }
   }
   h2 {
     font-size: 2rem;
     font-size: clamp(1rem, 4vw, 3rem);
     margin-top: 1.5rem;
+    @media (max-width: 550px) {
+      font-size: 1rem;
+    }
     color: var(--green);
     span {
       color: var(--grey);
@@ -207,9 +213,15 @@ export const StyledListItem = styled.li`
 
   .text {
     font-size: clamp(1rem, 3vw, 1.5rem);
+    @media (max-width: 550px) {
+      font-size: 1rem;
+    }
   }
   .mark {
     font-size: clamp(1.3rem, 3vw, 1.7rem);
+    @media (max-width: 550px) {
+      font-size: 1.3rem;
+    }
   }
   &:first-child {
     margin-top: 0.5rem;
@@ -246,6 +258,9 @@ export const StyledListItem = styled.li`
       background-color: var(--${(props) => props.color});
       padding-bottom: 1rem;
       font-size: clamp(1rem, 3vw, 1.6rem);
+      @media (max-width: 550px) {
+        font-size: 1rem;
+      }
     }
     & .icon {
       transition: 0.1s;
@@ -267,9 +282,15 @@ export const SubNav = styled.ul`
   li {
     padding: 0.2rem;
     font-size: clamp(1rem, 4vw, 1.7rem);
+    @media (max-width: 550px) {
+      font-size: 1rem;
+    }
 
     .active {
       font-size: clamp(1.2rem, 4vw, 1.8rem);
+      @media (max-width: 550px) {
+        font-size: 1.2rem;
+      }
       color: var(--grey);
     }
   }

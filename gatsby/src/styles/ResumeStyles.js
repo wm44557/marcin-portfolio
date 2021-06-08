@@ -45,6 +45,10 @@ export const Circle = styled.div`
   height: clamp(100px, 20vw, 150px);
   width: clamp(100px, 20vw, 150px);
   border-radius: 50%;
+  @media (max-width: 550px) {
+    height: 100px;
+    width: 100px;
+  }
   //background-color: var(--primary);
 `;
 
@@ -60,6 +64,10 @@ export const ImageWrapper = styled(Image)`
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--grey);
+  @media (max-width: 550px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
 export const LeftWrapper = styled.div`
   position: relative;
@@ -134,6 +142,9 @@ export const InfoSingleWrapper = styled.div`
   h1 {
     font-size: 2rem;
     font-size: clamp(1.5rem, 2vw, 1.7rem);
+    @media (max-width: 550px) {
+      font-size: 1.5rem;
+    }
     text-transform: uppercase;
     font-weight: 800;
     width: 100%;
@@ -153,6 +164,9 @@ export const InfoSingleWrapper = styled.div`
   p {
     font-size: 1.4rem;
     font-size: clamp(1.1rem, 2vw, 1.4rem);
+    @media (max-width: 550px) {
+      font-size: 1.1rem;
+    }
     margin-top: 2rem;
     margin-bottom: 0;
     span {
