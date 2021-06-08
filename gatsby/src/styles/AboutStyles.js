@@ -102,10 +102,17 @@ export const LeftWrapper = styled.div`
     padding: 1rem;
     padding-left: 0;
     padding-top: 0;
+    @media (max-width: 550px) {
+      padding: 0;
+    }
   }
 
   p {
+    font-size: 1.5rem;
     font-size: clamp(1rem, 2.5vw, 1.8rem);
+    @media (max-width: 550px) {
+      font-size: 1rem;
+    }
     margin-top: 2rem;
     margin-bottom: 0;
   }
@@ -137,9 +144,7 @@ export const LeftWrapper = styled.div`
   }
   @media (max-width: 450px) {
     .about {
-      padding: 2rem;
-      padding-left: 0;
-      padding-right: 4rem;
+      padding: 0;
     }
   }
 `;
@@ -301,6 +306,5 @@ export const SubNav = styled.ul`
     li {
       padding-right: 1rem;
     }
-    justify-content: flex-start;
   }
 `;
