@@ -97,12 +97,11 @@ export const LeftWrapper = styled.div`
   }
 
   p {
-    font-size: clamp(1rem, 3.5vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
     margin-top: 2rem;
     margin-bottom: 0;
   }
   h3 {
-    margin-top: 1rem;
     padding: 1rem 0;
     border-bottom: 3px solid var(--darkGrey);
     @media (max-width: 450px) {
@@ -163,8 +162,8 @@ export const ServicesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   .text {
-    font-size: 1.7rem;
-    font-size: clamp(1rem, 5vw, 1.7rem);
+    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 300;
     width: 100%;
   }
@@ -199,10 +198,10 @@ export const StyledListItem = styled.li`
   transition: 0.3s;
 
   .text {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
   }
   .mark {
-    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
   }
   &:first-child {
     margin-top: 0.5rem;
@@ -238,7 +237,7 @@ export const StyledListItem = styled.li`
       transition: 0.1s;
       background-color: var(--${(props) => props.color});
       padding-bottom: 1rem;
-      font-size: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(1rem, 3vw, 1.6rem);
     }
     & .icon {
       transition: 0.1s;
@@ -259,10 +258,10 @@ export const SubNav = styled.ul`
   margin-bottom: 1rem;
   li {
     padding: 0.2rem;
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 1.7rem);
 
     .active {
-      font-size: clamp(1.3rem, 4vw, 2.2rem);
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
       color: var(--grey);
     }
   }

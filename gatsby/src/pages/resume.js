@@ -35,7 +35,7 @@ export default function Resume() {
   const text = current === 'pl' ? resumePl : resumeEn;
   return (
     <Container>
-      <SEO title="About me - My Services" />
+      <SEO title="Resume - My Cv" />
       <LeftWrapper>
         <Circle>
           <ImageWrapper fluid={data.childImageSharp.fluid} />
@@ -102,6 +102,17 @@ export default function Resume() {
             <span>{text.sec.date}</span>
           </InfoSingleWrapper>
         </RightSingleWrapper>
+        <div>
+          <h3>
+            <span className="mark myServices primary3">
+              <MdWork /> {text.exp.name}
+            </span>
+          </h3>
+          <InfoSingleWrapper>
+            <h1>{text.exp.camp.name}</h1>
+            <span>{text.exp.camp.date}</span>
+          </InfoSingleWrapper>
+        </div>
         <div>
           <h3>
             <span className="mark myServices quaternary3">

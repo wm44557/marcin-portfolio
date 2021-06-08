@@ -130,29 +130,29 @@ export const InfoSingleWrapper = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   font-size: 1rem;
-  font-size: clamp(1.5rem, 1vw, 1.5rem);
+  font-size: clamp(1.5rem, 1vw, 1.3rem);
   h1 {
     font-size: 2rem;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
     text-transform: uppercase;
     font-weight: 800;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   h2 {
     color: var(--primary);
     font-weight: 600;
     font-size: 1rem;
-    font-size: clamp(1.5rem, 1vw, 1.5rem);
+    font-size: clamp(1.5rem, 1vw, 1.4rem);
     text-transform: uppercase;
-  }
   }
   span {
     color: var(--darkGrey);
     font-weight: 600;
   }
   p {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
     margin-top: 2rem;
     margin-bottom: 0;
     span {
@@ -171,6 +171,12 @@ export const RightWrapper = styled.div`
     transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
   }
 
+  h3 {
+    .mark {
+      font-size: 1.4rem;
+      font-size: clamp(1.1rem, 2vw, 1.8rem);
+    }
+  }
   div {
     padding: 1rem;
     padding-left: 0;

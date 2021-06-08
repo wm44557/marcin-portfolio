@@ -55,17 +55,20 @@ export default function SocialMedia() {
   return (
     <WrappedSocials>
       <li>
-        <Link to="https://www.instagram.com">
+        <Link target="_blank" to="https://github.com/wm44557">
           <FaGithub />
         </Link>
       </li>
       <li>
-        <Link to="https://www.instagram.com">
+        <Link
+          target="_blank"
+          to="https://www.linkedin.com/in/marcin-wrzos-4789171b0/"
+        >
           <FaLinkedinIn />
         </Link>
       </li>
       <li>
-        <Link to="https://www.instagram.com">
+        <Link target="_blank" to="https://www.instagram.com/rudybanan/?hl=pl">
           <FaInstagram />
         </Link>
       </li>

@@ -6,7 +6,7 @@ export const aboutEn = {
   where: 'Szczecin',
   student: 'studentIT',
   about:
-    " Hi, I'm Marcin. I am currently a student of IT (3rd year, 6th semester) at ZUT.  I really like new challenges, working with people and creating useful applications. I spend every free moment on self-improvement in the field of programming. I am a person with a great sense of humor and my hobbies are tennis and chess. ",
+    "Hey it's me, Marcin. Programmer full of energy and motivation to solve difficult problems. Each new problem inspires me to expand my knowledge and learn more and more effective solutions. A student of computer science (3rd year, 6th semester) at ZUT. Likes to create useful applications and enjoying from it. Works hard on his development, devotes to it every free moment. Distinguished by ambition, and the attitude that every problem is solvable. He likes chess, tennis, but also likes watching Polish Ekstraklasa matches.",
   sub: 'my services',
   nav1: 'development',
   nav2: 'database',
@@ -19,7 +19,7 @@ export const aboutPl = {
   where: 'Szczecin',
   student: 'studentIT',
   about:
-    'Hej, jestem Marcin. Obecnie studiuję informatykę (3rok. 6 semestr) na ZUT. Lubię nowe wyzwania, doskonalenie swoich skillsów oraz  pracę z ludźmi. Tworzenie użytecznych aplikacji sprawia mi dużo przyjemności. Jestem osobą z dużym poczuciem humoru a moim hoobby (nie licząc programowania) są szachy i tennis.',
+    'Hej to ja, Marcin. Programista pełny energii i motywacji do rozwiązywa trudnych problemów. Każdy kolejny napędza chęć poszerzania wiedzy i poznawania coraz efektywniejszych rozwiązań. Student informatyki (3 roku, 6semestru) na ZUT. Lubiący tworzyć użyteczne aplikacje, ale także czerpiący z tego przyjemność. Cięzko pracuje nad swoim rozwojem, poświęca mu każdą wolną chwilę. Wyróżnia się ambicją, oraz podejściem, że każdy problem jest do rozwiązania. Lubi szachy, tenis, ale także bardzo lubi oglądać mecze polskiej Ekstraklasy.',
   sub: 'moje usługi',
   nav1: 'tworzenie',
   nav2: 'dane',
@@ -74,6 +74,13 @@ export const resumeEn = {
         'Work on the weekends very interesting, contact with people, many human stories. Lots of experience.',
     },
   },
+  exp: {
+    name: 'courses',
+    camp: {
+      name: 'Participation in IAI PHP Camp workshops ',
+      date: 'May 25 - June 19, 2020',
+    },
+  },
   lang: {
     name: 'foregin languages',
     desc: 'Polish (native) - English (b2) - German (b2)',
@@ -83,11 +90,12 @@ export const resumeEn = {
     desc: 'all info in the section',
     bold: ' about me',
     desc2:
-      ', generally JavaScript is my main, React, Gatsby, NextJS, backend MongoDB, express, or Firebase, NodeJS with headelss CMS (sanity or keystone). I like used Graphql. At the university I often use php.',
+      ', JavaScript is my main, React, Gatsby, NextJS, backend MongoDB, express, or Firebase, NodeJS with headelss CMS (sanity or keystone). I like used Graphql. At the university I often use php.',
   },
   interests: {
     name: 'interests',
-    desc: 'Chess - Tennis - Blockchain and cryptocurrencies',
+    desc:
+      'Chess - Tennis - Blockchain and cryptocurrencies - Polish Ekstraklasa',
   },
 };
 export const resumePl = {
@@ -103,16 +111,16 @@ export const resumePl = {
     name: 'Zachodniopomorski Uniwersytet Technologiczny w Szczecinie',
     date: '2018-2022',
     desc:
-      'Jestem na 6 semestrze studiów, w październiku będę na siódmym. Moja specjalizacja to',
-    bold: 'inżynieria systemów informacyjnych',
-    desc2: ' (programowanei webowe).',
+      'Jestem na 6 semestrze studiów, a od października zaczynam 7. Moja specjalizacja to',
+    bold: ' inżynieria systemów informacyjnych',
+    desc2: ' (programowanie webowe).',
     cat: 'Informatyka',
   },
   tal: {
     name: 'Gesamtschule Talsand in Schwedt / Oder',
     date: '2015-2016',
     desc:
-      'Polsko - Niemiecka wymiana. Rozszerzeone przedmioty - inforamtyka, historia.',
+      'Polsko - Niemiecka wymiana. Rozszerzeone przedmioty - informatyka, historia.',
   },
   sec: {
     name: 'Liceum ogólnokształcące w Gryfinie',
@@ -124,7 +132,14 @@ export const resumePl = {
       name: 'Barman w Greckiej restauracji w Niemczech',
       date: '2017-2020',
       desc:
-        'Praca w weekendy bardzo intereusjąca, kontakt z klientem, wiele ciekawych historii. Dużo doświadzcenia w kontaktach międzyludzkich.',
+        'Praca w weekendy, kontakt z klientem, wiele ciekawych historii. Dużo doświadzcenia w kontaktach międzyludzkich.',
+    },
+  },
+  exp: {
+    name: 'szkolenia',
+    camp: {
+      name: 'Udział w warsztatach IAI PHP Camp ',
+      date: '25 maja - 19 czerwca 2020',
     },
   },
   lang: {
@@ -136,11 +151,11 @@ export const resumePl = {
     desc: 'wszystkie inforamcje w sekcji',
     bold: ' o mnie',
     desc2:
-      ', generalnie JavaScript to mój ulubiony język, React, Gatsby, NextJS, backend MongoDB, express, lub Firebase, NodeJS z headelss CMS (sanity or keystone). Lubię używać Graphql. Na uczelni często korzystam z php.',
+      ', JavaScript to mój ulubiony język, React, Gatsby, NextJS, backend MongoDB, express, lub Firebase, NodeJS z headelss CMS (sanity or keystone). Lubię używać Graphql. Na uczelni często korzystam z php.',
   },
   interests: {
     name: 'zainteresowania',
-    desc: 'Szachy - Tennis - Blockchain i kryptowaluty',
+    desc: 'Szachy - Tennis - Blockchain i kryptowaluty - Polska Ekstraklasa',
   },
 };
 export const projectsPl = {
