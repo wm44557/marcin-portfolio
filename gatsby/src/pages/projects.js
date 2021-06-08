@@ -5,6 +5,7 @@ import { BsPeopleFill, BsPersonFill } from 'react-icons/bs';
 import { ProjectGrid, ProjectStyles } from '../styles/ProjectsStyles';
 import LangContext from '../components/LanguageContext';
 import { projectsPl, projectsEn } from '../data/text';
+import SEO from '../components/SEO';
 
 export default function Projects({ data }) {
   const projects = data.projects.edges;
@@ -12,6 +13,7 @@ export default function Projects({ data }) {
   const text = current === 'pl' ? projectsPl : projectsEn;
   return (
     <ProjectGrid>
+      <SEO title="All projects" />
       {projects.map((person) => (
         <ProjectStyles key={person.node.id}>
           <Link to={`/project/${person.node.slug.current}`}>

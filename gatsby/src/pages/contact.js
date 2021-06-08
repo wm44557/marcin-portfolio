@@ -3,6 +3,7 @@ import { StyledForm, StyledInputField } from '../styles/ContactStyles';
 import useForm from '../utils/UseForm';
 import LangContext from '../components/LanguageContext';
 import { contactPl, contactEn } from '../data/text';
+import SEO from '../components/SEO';
 
 const ContactPage = () => {
   const defaultValues = {
@@ -23,6 +24,8 @@ const ContactPage = () => {
   const text = current === 'pl' ? contactPl : contactEn;
   return (
     <>
+      <SEO title="Contact page" />
+
       <StyledForm onSubmit={(e) => submitOrder(e)} disabled={loading}>
         <div className="info">
           <span className="mark primary normal">Email</span>

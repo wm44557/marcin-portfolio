@@ -26,6 +26,8 @@ import {
   StyledDivIco,
   InfoWrapper,
 } from '../styles/SingleProjectStyles';
+import SEO from '../components/SEO';
+import { Container } from '../styles/ResumeStyles';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const SingleTechItem = ({ data, text }) => {
@@ -62,6 +64,7 @@ export default function SingleProjectTemplate({ data: { project } }) {
   console.log(project.skillsDev);
   return (
     <Wrapper>
+      <SEO title={`Project - ${project.name}`} />
       <NameWrapper>
         <span
           className={`mark ${
@@ -128,12 +131,14 @@ export default function SingleProjectTemplate({ data: { project } }) {
               <span>Link do Github</span>
             </StyledLinkIco>
           </IcoWrapper>
-          <IcoWrapper>
-            <StyledDivIco onClick={() => setLiveCollapse(!liveCollapse)}>
-              <HiStatusOnline />
-              <span>Informacje o live</span>
-            </StyledDivIco>
-          </IcoWrapper>
+          {project.live !== null && (
+            <IcoWrapper>
+              <StyledDivIco onClick={() => setLiveCollapse(!liveCollapse)}>
+                <HiStatusOnline />
+                <span>Informacje o live</span>
+              </StyledDivIco>
+            </IcoWrapper>
+          )}
           {liveCollapse && (
             <InfoWrapper>
               {project.userData && (
@@ -142,7 +147,6 @@ export default function SingleProjectTemplate({ data: { project } }) {
                   {project.userData}
                 </p>
               )}
-
               <StyledLinkIco to={project.live} target="_blank">
                 <FiLink />
                 <span>Link do Live</span>

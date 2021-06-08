@@ -20,6 +20,9 @@ export const StyledForm = styled.form`
     width: 60%;
     max-width: 400px;
   }
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `;
 export const StyledInputField = styled.div`
   position: relative;
