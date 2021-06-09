@@ -137,6 +137,7 @@ export const LeftWrapper = styled.div`
     }
     @media (max-width: 550px) {
       overflow: visible;
+      max-height: 700px;
     }
   }
   @media (max-width: 850px) {

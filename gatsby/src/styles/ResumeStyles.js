@@ -187,6 +187,7 @@ export const RightWrapper = styled.div`
 
   @media (max-width: 550px) {
     overflow: visible;
+    max-height: 1500px;
   }
 
   h3 {
