@@ -3,19 +3,29 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
-  .next-button {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(25%);
-    z-index: 999;
-  }
+  .next-button,
   .prev-button {
     position: absolute;
+    transform: translateY(-25%);
+    z-index: 999;
+    background: none;
+    box-shadow: none;
+    color: var(--primary);
+    font-size: 6rem;
+    &:disabled {
+      color: var(--darkGrey);
+    }
+    @media (max-width: 500px) {
+      font-size: 4rem;
+    }
+  }
+  .next-button {
+    top: 50%;
+    right: 0;
+  }
+  .prev-button {
     top: 50%;
     left: 0;
-    transform: translateY(25%);
-    z-index: 999;
   }
   .swiper-pagination-bullet-active {
     background-color: var(--primary) !important;

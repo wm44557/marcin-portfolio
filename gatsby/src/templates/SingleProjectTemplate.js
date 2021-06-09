@@ -7,6 +7,7 @@ import { BsPeopleFill, BsPersonFill } from 'react-icons/bs';
 import ReactPlayer from 'react-player/lazy';
 import { FiYoutube, FiGithub, FiLink } from 'react-icons/fi';
 import { HiStatusOnline } from 'react-icons/hi';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import LangContext from '../components/LanguageContext';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -113,8 +114,12 @@ export default function SingleProjectTemplate({ data: { project } }) {
               <Img fluid={img.asset.fluid} />
             </SwiperSlide>
           ))}
-          <button className="next-button"> next</button>
-          <button className="prev-button"> prev</button>
+          <button className="next-button">
+            <IoIosArrowForward />
+          </button>
+          <button className="prev-button">
+              <IoIosArrowBack />
+          </button>
         </Swiper>
       </div>
       <ContentGrid>
