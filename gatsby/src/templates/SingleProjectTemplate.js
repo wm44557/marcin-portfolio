@@ -84,8 +84,6 @@ export default function SingleProjectTemplate({ data: { project } }) {
         </span>
       </NameWrapper>
       <div>
-        <button className="custom_next">Custom Next Btn</button>
-        <button className="custom_prev">Custom Next Btn</button>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -104,8 +102,8 @@ export default function SingleProjectTemplate({ data: { project } }) {
             },
           }}
           navigation={{
-            nextEl: '.custom_next',
-            prevEl: '.custom_prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
           }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
@@ -115,6 +113,8 @@ export default function SingleProjectTemplate({ data: { project } }) {
               <Img fluid={img.asset.fluid} />
             </SwiperSlide>
           ))}
+          <div className="swiper-button-prev" />
+          <div className="swiper-button-next" />
         </Swiper>
       </div>
       <ContentGrid>
