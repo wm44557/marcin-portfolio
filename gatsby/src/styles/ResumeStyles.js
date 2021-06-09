@@ -185,6 +185,10 @@ export const RightWrapper = styled.div`
     transform: rotate(-3deg) translateY(2rem) translateX(-0.5rem);
   }
 
+  @media (max-width: 550px) {
+    overflow: visible;
+  }
+
   h3 {
     .mark {
       font-size: 1.4rem;

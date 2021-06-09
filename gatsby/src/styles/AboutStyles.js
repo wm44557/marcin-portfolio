@@ -135,6 +135,9 @@ export const LeftWrapper = styled.div`
     @media (max-width: 1100px) {
       margin-right: 0;
     }
+    @media (max-width: 550px) {
+      overflow: visible;
+    }
   }
   @media (max-width: 850px) {
     margin-left: 0.2rem;
@@ -142,6 +145,7 @@ export const LeftWrapper = styled.div`
   @media (max-width: 1100px) {
     order: 1;
   }
+
   @media (max-width: 450px) {
     .about {
       padding: 0;
