@@ -3,6 +3,20 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
+  .next-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(25%);
+    z-index: 999;
+  }
+  .prev-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(25%);
+    z-index: 999;
+  }
   .swiper-pagination-bullet-active {
     background-color: var(--primary) !important;
     opacity: 1 !important;

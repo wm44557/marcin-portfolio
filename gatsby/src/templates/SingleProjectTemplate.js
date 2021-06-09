@@ -102,8 +102,8 @@ export default function SingleProjectTemplate({ data: { project } }) {
             },
           }}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.next-button',
+            prevEl: '.prev-button',
           }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
@@ -113,8 +113,8 @@ export default function SingleProjectTemplate({ data: { project } }) {
               <Img fluid={img.asset.fluid} />
             </SwiperSlide>
           ))}
-          <button className="swiper-button-next"> </button>
-          <button className="swiper-button-prev"> </button>
+          <button className="next-button"> next</button>
+          <button className="prev-button"> prev</button>
         </Swiper>
       </div>
       <ContentGrid>
