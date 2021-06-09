@@ -68,10 +68,7 @@ export default function SocialMedia() {
         </Link>
       </li>
       <li>
-        <Link
-          target="_blank"
-          to="https://www.linkedin.com/in/marcin-wrzos-4789171b0/"
-        >
+        <Link target="_blank" to="https://www.linkedin.com/in/marcin-wrzos">
           <FaLinkedinIn />
         </Link>
       </li>
