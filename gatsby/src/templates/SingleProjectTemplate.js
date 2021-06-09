@@ -113,8 +113,8 @@ export default function SingleProjectTemplate({ data: { project } }) {
               <Img fluid={img.asset.fluid} />
             </SwiperSlide>
           ))}
-          <div className="swiper-button-prev" />
-          <div className="swiper-button-next" />
+          <button className="swiper-button-next"> </button>
+          <button className="swiper-button-prev"> </button>
         </Swiper>
       </div>
       <ContentGrid>
