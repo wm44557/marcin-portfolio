@@ -27,7 +27,6 @@ import {
   InfoWrapper,
 } from '../styles/SingleProjectStyles';
 import SEO from '../components/SEO';
-import { Container } from '../styles/ResumeStyles';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const SingleTechItem = ({ data, text }) => {
@@ -84,33 +83,40 @@ export default function SingleProjectTemplate({ data: { project } }) {
           )}
         </span>
       </NameWrapper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        breakpoints={{
-          640: {
-            width: 640,
-            slidesPerView: 1,
-          },
-          1000: {
-            width: 768,
-            slidesPerView: 1.1,
-          },
-          1200: {
-            width: 868,
-            slidesPerView: 1.1,
-          },
-        }}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-      >
-        {project.image.map((img) => (
-          <SwiperSlide key={img.asset.fluid.src}>
-            <Img fluid={img.asset.fluid} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div>
+        <button className="custom_next">Custom Next Btn</button>
+        <button className="custom_prev">Custom Next Btn</button>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            1000: {
+              width: 768,
+              slidesPerView: 1.1,
+            },
+            1200: {
+              width: 868,
+              slidesPerView: 1.1,
+            },
+          }}
+          navigation={{
+            nextEl: '.custom_next',
+            prevEl: '.custom_prev',
+          }}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
+          {project.image.map((img) => (
+            <SwiperSlide key={img.asset.fluid.src}>
+              <Img fluid={img.asset.fluid} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <ContentGrid>
         <LeftContent>
           <div>
