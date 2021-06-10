@@ -19,7 +19,7 @@ export const aboutPl = {
   where: 'Szczecin',
   student: 'studentIT',
   about:
-    'Hej, to ja Marcin. Student informatyki (3 rok) na ZUT. Lubiący rozwiązywać trudne problemy. Ciężko pracuje nad swoim rozwojem. Wyróżnia się dużą ambicją. Posiada sporą wiedzę z różnych dziedzin informatyki i potrafi ją dobrze wykorzystywać. Lubi oglądać mecze polskiej Ekstraklasy, ale także grać w tenisa i szachy.',
+    'Hej, to ja Marcin. Student informatyki (3. rok) na ZUT. Lubiący rozwiązywać trudne problemy. Ciężko pracuje nad swoim rozwojem. Wyróżnia się dużą ambicją. Posiada sporą wiedzę z różnych dziedzin informatyki i potrafi ją dobrze wykorzystywać. Lubi oglądać mecze polskiej Ekstraklasy, ale także grać w tenisa i szachy.',
   sub: 'moje usługi',
   nav1: 'tworzenie',
   nav2: 'dane',
