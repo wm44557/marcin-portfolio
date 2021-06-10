@@ -6,7 +6,7 @@ export const aboutEn = {
   where: 'Szczecin',
   student: 'studentIT',
   about:
-    "Hey it's me, Marcin. Programmer full of energy and motivation to solve difficult problems. Each new problem inspires me to expand my knowledge and learn more and more effective solutions. A student of computer science (3rd year, 6th semester) at ZUT. Likes to create useful applications and enjoying from it. Works hard on his development, devotes to it every free moment. Distinguished by ambition, and the attitude that every problem is solvable. He likes chess, tennis, but also likes watching Polish Ekstraklasa matches.",
+    "Hey, it's me Marcin. A student of computer science (3rd year) at ZUT. Likes to solve difficult problems. Works hard on his development. He is distinguished by high ambition. Has considerable knowledge in various fields of computer science and knows how to use it well. He likes watching Polish Ekstraklasa matches, but also plays tennis and chess.",
   sub: 'my services',
   nav1: 'development',
   nav2: 'database',
@@ -19,7 +19,7 @@ export const aboutPl = {
   where: 'Szczecin',
   student: 'studentIT',
   about:
-    'Hej to ja, Marcin. Programista pełny energii i motywacji do rozwiązywa trudnych problemów. Każdy kolejny napędza chęć poszerzania wiedzy i poznawania coraz efektywniejszych rozwiązań. Student informatyki (3 roku, 6semestru) na ZUT. Lubiący tworzyć użyteczne aplikacje, ale także czerpiący z tego przyjemność. Cięzko pracuje nad swoim rozwojem, poświęca mu każdą wolną chwilę. Wyróżnia się ambicją, oraz podejściem, że każdy problem jest do rozwiązania. Lubi szachy, tenis, ale także bardzo lubi oglądać mecze polskiej Ekstraklasy.',
+    'Hej, to ja Marcin. Student informatyki (3 rok) na ZUT. Lubiący rozwiązywać trudne problemy. Ciężko pracuje nad swoim rozwojem. Wyróżnia się dużą ambicją. Posiada sporą wiedzę z różnych dziedzin informatyki i potrafi ją dobrze wykorzystywać. Lubi oglądać mecze polskiej Ekstraklasy, ale także grać w tenisa i szachy.',
   sub: 'moje usługi',
   nav1: 'tworzenie',
   nav2: 'dane',
@@ -41,7 +41,8 @@ export const navPl = {
 export const resumeEn = {
   profile: 'profile',
   profilep:
-    'I have been programming for myself for several years, now would like to share my skills with others and translate it as a work hobby.I am not afraid to ask questions, I like to find solutions to problems, it satisfies me. Always cheerful!',
+    'A computer science student motivated to solve problems. Enjoys developing useful applications. Works hard on development. Distinguished by ambition and the attitude that any problem can be solved. Possesses strong knowledge in various areas of computer science and can put it to good use.',
+
   phone: 'phone',
   adress: 'adress',
   date: 'date of birth',
@@ -71,7 +72,7 @@ export const resumeEn = {
       name: 'Barman in Greek Restaurant in Germany',
       date: '2017-2020',
       desc:
-        'Work on the weekends very interesting, contact with people, many human stories. Lots of experience.',
+        'Client-focused work. Gave me a lot of experience in interpersonal relations and allowed me to know a lot of people`s stories.',
     },
   },
   exp: {
@@ -87,10 +88,9 @@ export const resumeEn = {
   },
   skills: {
     name: 'skills',
-    desc: 'all info in the section',
-    bold: ' about me',
-    desc2:
-      ', JavaScript is my main, React, Gatsby, NextJS, backend MongoDB, express, or Firebase, NodeJS with headelss CMS (sanity or keystone). I like used Graphql. At the university I often use php.',
+    desc: 'All information about skills is included in the section',
+    bold: ' about me.',
+    desc2: ' Most of them are based on real projects shown on the site.',
   },
   interests: {
     name: 'interests',
@@ -101,7 +101,7 @@ export const resumeEn = {
 export const resumePl = {
   profile: 'profil',
   profilep:
-    'Programuję dla siebie od kilku lat, teraz chciałbym podzielić się swoimi umiejętnościami z innymi osobami i zmienić je w pracę - hobby. Nie boję się zadawać pytań, lubię szukać rozwiązań problemów. To przynosi mi satysfakcję i spełnia mnie.Zawsze wesoły i zadowolony.',
+    'Student informatyki zmotywowany do rozwiązywania problemów. Lubiący tworzyć użyteczne aplikacje. Ciężko pracuje nad rozwojem. Wyróżniający się ambicją oraz podejściem, że każdy problem jest w stanie rozwiązać. Posiada dużą wiedzę z różnych dziedzin informatyki i potrafi ją dobrze wykorzystać.',
   phone: 'nr.telefonu',
   adress: 'adres',
   date: 'data urodzenia',
@@ -132,7 +132,7 @@ export const resumePl = {
       name: 'Barman w Greckiej restauracji w Niemczech',
       date: '2017-2020',
       desc:
-        'Praca w weekendy, kontakt z klientem, wiele ciekawych historii. Dużo doświadzcenia w kontaktach międzyludzkich.',
+        'Praca nastawiona na kontakt z klientem. Dała mi bardzo dużo doświadczenia w kontaktach międzyludzkich oraz pozwoliła poznać wiele ludzkich historii.',
     },
   },
   exp: {
@@ -148,10 +148,10 @@ export const resumePl = {
   },
   skills: {
     name: 'umiejętności',
-    desc: 'wszystkie inforamcje w sekcji',
-    bold: ' o mnie',
+    desc: 'Wszystkie inforamcje dotyczące umiejętności zawarte są w sekcji',
+    bold: ' o mnie.',
     desc2:
-      ', JavaScript to mój ulubiony język, React, Gatsby, NextJS, backend MongoDB, express, lub Firebase, NodeJS z headelss CMS (sanity or keystone). Lubię używać Graphql. Na uczelni często korzystam z php.',
+      ' Większość z nich  jest oparta o  rzeczywiste projekty przedstawione na stronie.',
   },
   interests: {
     name: 'zainteresowania',
