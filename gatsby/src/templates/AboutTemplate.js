@@ -115,6 +115,7 @@ export const query = graphql`
     file(name: { eq: "ja9" }) {
       childImageSharp {
         fluid(maxWidth: 200, maxHeight: 200, quality: 98) {
+          base64
           src
         }
       }
